@@ -39,17 +39,17 @@ if(isset($_COOKIE[$cookie_name])) {
   <div class="row" style="margin-left: auto; margin-right: auto; width: 80%">
     <div class="col-sm-6">
         <div class="col-xs-6">
-            <a href="en.php"><img class="img-responsive" src="/images/UnitedKingdom.png"/>
+            <a href="welcome/en.html"><img class="img-responsive" src="/images/UnitedKingdom.png"/>
             </p>English</a>
         </div>
         <div class="col-xs-6">
-            <a href="cn.php"><img class="img-responsive" src="/images/China.png"/>
+            <a href="welcome/cn.html"><img class="img-responsive" src="/images/China.png"/>
             </p>中國</a>
         </div>
     </div>
     <div class="col-sm-6">
         <div class="col-xs-6">
-            <a href="kr.php"><img class="img-responsive" src="/images/SouthKorea.png"/>
+            <a href="welcome/kr.html"><img class="img-responsive" src="/images/SouthKorea.png"/>
             </p>한국인</a>
         </div>
         <!--
