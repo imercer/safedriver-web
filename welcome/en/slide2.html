@@ -96,16 +96,13 @@ body {
     text-decoration: none;
   }
   .card .image {
-    position: relative;
+    position: absolute;
   }
   .card .image img {
     border-radius: 2px 2px 0 0;
-    position: relative;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    position: absolute;
     width: 100%;
+    margin:0 auto;
   }
   .card .image .title {
     position: absolute;
@@ -118,9 +115,7 @@ body {
 </head>
 <center>
 <div class="card" style="width: 90%; margin:0 auto; text-align: left">
-    <div class="image">
-    <img src="../mobile-driving.jpg">
-  </div>
+    <center><img src="../mobile-driving.jpg"></center>
   <div class="content">
           <span class="title">Do not use your phone while driving</span>
     <p>Using your mobile phone while driving in New Zealand is illegal and very unsafe. The SafeDriver app provides you with audio prompts so you don't have to interact with your device.</p>
