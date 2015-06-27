@@ -21,7 +21,8 @@
             <h1><a href="index.php"><img src="/images/Metro-Back-256.png" width="42px"></a>&nbsp;Send a Message</h1>
                 <b>Message Type: </b><?php echo $_GET['ref'];?>
                 <br>
-                <form method="get" action="<?php echo $_GET['ref'];?>.php"><b>Message Text: </b><input type="text" name="message" required>
+                <form method="get" action="<?php echo $_GET['ref'];?>.php"><b>Message Text: </b><textarea name="message" rows="10" cols="30">
+</textarea>
                                     <br>
 <input type="submit" value="Submit">
                 </form>
