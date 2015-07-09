@@ -11,7 +11,7 @@
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <!-- Material Design Lite -->
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
         <!-- Material Design icon font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
@@ -44,6 +44,28 @@
                 </nav>
               </div>
             </div>
+        <br>
+        <br>
+        <?php
+            $msgfile = '/var/www/drivesafe/push/androidmsg';
+            if (file_exists($msgfile)) {
+                $pendingalert = file_get_contents($msgfile);
+                if (isset($pendingalert)) {
+                    echo "
+                    <div style=\"background-color: rgba(255,58,0,0.85); width: 100%; height: auto; max-height:40%; color: #EEE\">
+                    <br>
+                    <center>
+                    <h6>$pendingalert</h6></center>
+                    <br>
+                    </div>"; }
+                else { 
+                    echo "";
+                }
+            } else {
+                echo "";
+            }
+        ?>
+           
             <br>
             <br>
             <br>

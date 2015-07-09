@@ -82,10 +82,27 @@ $newid = $currentid + 1;
 file_put_contents($msgfile, $message);
 sleep(10);
 file_put_contents($idfile, $newid);
-
-
-
-
+// require codebird
+require_once('codebird.php');
+ 
+\Codebird\Codebird::setConsumerKey("4d5SQPcrdfGCvI4Gm7u64NUik", "jA0eppU5iLJ8FY0wiGIkPMaPk8RSfWRS1k5zIZjJZKntElefqd");
+$cb = \Codebird\Codebird::getInstance();
+$cb->setToken("3174625284-PueDjm5YbE7oeS8xoYsZUFsdnGkkXhsp4dboPN0", "tUlkwD6j7j8tpbTK4qI9QrdAXaKfGddIZNkk6ejj2tKyJ");
+ 
+$params = array(
+  'status' => "$message";
+);
+$reply = $cb->statuses_update($params);
+$status = $reply->httpstatus;
+    if($status == 200) {
+ 
+      echo "Tweeted";
+      $tweet = "Done";
+ 
+      } else {
+      echo "Failed to Tweet";
+      $tweet = "Failed $status";
+      }
             echo "<script language = \"javascript\" type=\"text/javascript\">";
-            echo "window.location = \"messagesent.php?type=event&number=$x\";";
+            echo "window.location = \"messagesent.php?type=event&number=$x&twitter=$tweet\";";
             echo "</script>";

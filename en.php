@@ -16,7 +16,7 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <!-- Material Design Lite -->
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
-        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
         <!-- Material Design icon font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
