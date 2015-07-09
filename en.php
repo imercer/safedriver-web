@@ -10,6 +10,7 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/materialize.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -41,7 +42,7 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
                   <span class="mdl-layout-title"><a href="/index.php" style="color: #EEE">SafeDriver</a></span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="/learn/index.html" style="color: #EEE">Learn</a>
-                    <a class="mdl-navigation__link" href="/test/index.html" style="color: #EEE">Test</a>
+                    <a class="mdl-navigation__link" href="/test/index.html" style="color: #EEE">Quiz</a>
                     <a class="mdl-navigation__link" href="/drive/status.php" style="color: #EEE">Road Status</a>
                     <a class="mdl-navigation__link" href="" style="color: #EEE">Help</a>
                     <a class="mdl-navigation__link" href="" style="color: #EEE">About</a>
@@ -70,7 +71,7 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
                     <a href="test/index.html">
                           <div class="mdl-card mdl-shadow--2dp card-square" style="background-colour: blue">
                             <div class="mdl-card__title mdl-card--expand" style="background: bottom right 15% no-repeat rgb(194,144,8)">
-                                <h2 class="mdl-card__title-text" style="color: #111; font-weight: bold">Test</h2>
+                                <h2 class="mdl-card__title-text" style="color: #111; font-weight: bold">Quiz</h2>
                             </div>
                           <div class="mdl-card__supporting-text">
                             Test your knowledge of the rules on New Zealand roads.

@@ -18,9 +18,9 @@
         <item class="element-divider"></item>
                 <a href="../learn/index.html" style="color: #FFF"><item class="element">Learn</item></a>
         <item class="element-divider"></item>
-                <a href="../test/index.html" style="color: #FFF"><item class="element">Test</item></a>     
+                <a href="../test/index.html" style="color: #FFF"><item class="element">Quiz</item></a>     
         <item class="element-divider"></item>
-                <a href="../drive/status.php" style="color: #FFF"><item class="element">Drive</item></a>  
+                <a href="../drive/status.php" style="color: #FFF"><item class="element">Road Status</item></a>  
     </nav>
 </nav>
             <br>

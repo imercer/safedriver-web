@@ -12,7 +12,7 @@
         <div class="container">
         <nav class="navigation-bar dark">
             <nav class="navigation-bar-content">
-                <h1 style="color: white">Drive Safe on New Zealand Roads</h1>
+                <h1 style="color: white">Road Status Safe on New Zealand Roads</h1>
     </nav>
 </nav>
             <br>

@@ -1,466 +1,60 @@
 <!DOCTYPE html>
 <html>
     <head>
-<link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title>
-        <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">         <link rel="stylesheet" href="/css/card.css"><link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/metro-bootstrap.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+        <title>SafeDriver - Drive Safe on New Zealand Roads</title>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
-        <script src="/js/metro.min.js"></script>
+        <script src="/js/materialize.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-        <style>
-        .ui-widget.dialog {
-    font-family: Verdana,Arial,sans-serif;
-    font-size: .8em;
-}
-
-.ui-widget-content.dialog {
-    background: #F9F9F9;
-    border: 1px solid #90d93f;
-    color: #222222;
-}
-
-.ui-dialog {
-    left: 0;
-    outline: 0 none;
-    padding: 0 !important;
-    position: absolute;
-    top: 0;
-}
-
-.ui-dialog .ui-dialog-content {
-    background: none repeat scroll 0 0 transparent;
-    border: 0 none;
-    overflow: auto;
-    position: relative;
-    padding: 5px;
-    margin: 0;
-}
-
-.ui-dialog .ui-widget-header {
-    background: #fff;
-    border: 0;
-    color: #fff;
-    font-weight: normal;
-}
-
-.ui-dialog .ui-dialog-titlebar {
-    padding: 0.1em .5em;
-    position: relative;
-    font-size: 1em;
-}
-            
-                <style>
-/*
-Copyright 2015 Meorga.nl. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-  http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
-
-@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
-html,
-body {
-        font-family: 'Roboto', sans-serif;
-        background: #eee;
-        height: 100%;
-        width: 100%;
-        padding: 5px;
-        margin: 0;
-        color: #2E2E3C;
-        line-height: 24px;
-        -webkit-font-smoothing: antialiased;
-}
-
-* {
-        box-sizing: border-box;
-        -webkit-tap-highlight-color: transparent;
-        text-rendering: optimizeLegibility;
-}
-
-*::-moz-selection {
-        color: #CFD8DC;
-        background: #009688;
-}
-
-*::selection {
-        color: #CFD8DC;
-        background: #009688;
-}
-
-*::-webkit-scrollbar {
-        width: 10px!important;
-        background: #FAFAFA;
-}
-
-*::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, .08);
-}
-
-*::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, .2);
-}
-/* End defaults*/
-.card {
-    display: inline-block;
-    vertical-align: top;
-    width: 350px;
-    position: relative;
-    overflow: hidden;
-    margin: 1px;
-    background: #FFF;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    color: #272727;
-    border-radius: 2px;
-  }
-  .card .title {
-    line-height: 48px;
-    font-size: 24px;
-    font-weight: 300;
-  }
-  .card .content {
-    padding: 20px;
-    font-weight: 300;
-    border-radius: 0 0 2px 2px;
-  }
-  .card p {
-    margin: 0;
-  }
-  .card .action {
-    border-top: 1px solid rgba(160, 160, 160, 0.2);
-    padding: 20px;
-  }
-  .card a {
-    color: #ffab40;
-    margin-right: 20px;
-    -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .card .image {
-    position: absolute;
-  }
-  .card .image img {
-    border-radius: 2px 2px 0 0;
-    position: absolute;
-    width: 100%;
-    margin:0 auto;
-  }
-  .card .image .title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 20px;
-    color: #FFF;
-  }
-</style>
-        </style>
-<script>
-$(function() {
-    $( "#left" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#lefter" ).click(function() {
-      $( "#left" ).dialog( "open" );
-    });
-    
-    $( "#overtake" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#overtaker" ).click(function() {
-      $( "#overtake" ).dialog( "open" );
-    });
-    
-    $( "#speed" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#speeder" ).click(function() {
-      $( "#speed" ).dialog( "open" );
-    });
-    
-      $( "#motorways" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#motorwaysopen" ).click(function() {
-      $( "#motorways" ).dialog( "open" );
-    });
-    
-    $( "#railwaycrossing" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#railway" ).click(function() {
-      $( "#railwaycrossing" ).dialog( "open" );
-    });
-    
-      $( "#trafficlight" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#traffic" ).click(function() {
-      $( "#trafficlight" ).dialog( "open" );
-    });
-    
-          $( "#onebridge" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#oneway" ).click(function() {
-      $( "#onebridge" ).dialog( "open" );
-    });
-    
-            $( "#roundabout" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#roundabouts" ).click(function() {
-      $( "#roundabout" ).dialog( "open" );
-    });  
-                $( "#parkiner" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#parking" ).click(function() {
-      $( "#parkiner" ).dialog( "open" );
-    });  
-    
-                    $( "#pedcrossing" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#crossings" ).click(function() {
-      $( "#pedcrossing" ).dialog( "open" );
-    });  
-    
-                        $( "#inter" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#intersection" ).click(function() {
-      $( "#inter" ).dialog( "open" );
-    });  
-   $( "#passer" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#passing" ).click(function() {
-      $( "#passer" ).dialog( "open" );
-    });  
-   $( "#information" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#info" ).click(function() {
-      $( "#information" ).dialog( "open" );
-    });  
-       $( "#videoplayer" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#video" ).click(function() {
-      $( "#videoplayer" ).dialog( "open" );
-    });  
-           $( "#slipperydialog" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#slippery" ).click(function() {
-      $( "#slipperydialog" ).dialog( "open" );
-    });
-      $( "#turns" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#turnsopener" ).click(function() {
-      $( "#turns" ).dialog( "open" );
-    }); 
-    
-    $( "#gravel" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#gravelroads" ).click(function() {
-      $( "#gravel" ).dialog( "open" );
-    }); 
-    
-     $( "#animalsroad" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#animals" ).click(function() {
-      $( "#animalsroad" ).dialog( "open" );
-    }); 
-    
-    $( "#icyroads" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#ice" ).click(function() {
-      $( "#icyroads" ).dialog( "open" );
-    }); 
-  });  
-</script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/css/card.css"/>
+        <!-- Material Design Lite -->
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+        <!-- Material Design icon font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="dialoglauncher.js"></script>
     </head>
     <body class="metro">
         <div class="container">
-        <nav class="navigation-bar dark">
-            <nav class="navigation-bar-content">
-                <a href="/index.php" style="color: #FFF"><item class="element">Home</item></a>
-        <item class="element-divider"></item>
-                <a href="../learn/index.html" style="color: #FFF"><item class="element">Learn</item></a>
-        <item class="element-divider"></item>
-                <a href="../test/index.html" style="color: #FFF"><item class="element">Test</item></a>     
-        <item class="element-divider"></item>
-                <a href="../drive/status.php" style="color: #FFF"><item class="element">Drive</item></a>  
-    </nav>
-</nav>
-            <br>
-        <h1>Learn</h1>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+              <header class="mdl-layout__header" style="background-color: rgb(51,51,51); position: fixed">
+                <div class="mdl-layout__header-row">
+                  <!-- Title -->
+                  <span class="mdl-layout-title">Learn</span>
+                  <!-- Add spacer, to align navigation to the right -->
+                  <div class="mdl-layout-spacer"></div>
+                  <!-- Navigation. We hide it in small screens.
+                  <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                  </nav>
+                     -->
+                </div>
+              </header>
+              <div class="mdl-layout__drawer" style="background-color: rgb(51,51,51); border: 0; height: 100%">
+                  <span class="mdl-layout-title"><a href="/index.php" style="color: #EEE">SafeDriver</a></span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="/learn/index.html" style="color: #EEE">Learn</a>
+                    <a class="mdl-navigation__link" href="/test/index.html" style="color: #EEE">Quiz</a>
+                    <a class="mdl-navigation__link" href="/drive/status.php" style="color: #EEE">Road Status</a>
+                    <a class="mdl-navigation__link" href="" style="color: #EEE">Help</a>
+                    <a class="mdl-navigation__link" href="" style="color: #EEE">About</a>
+                </nav>
+              </div>
+            </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="padding-left: 10px">
         <button id="lefter" style="color: #FFF; background-color: #FFF">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
@@ -670,13 +264,15 @@ $(function() {
         </div>
         </button>
         </div>
+        </div>
+        </div>
     </body>
 <div id="left" title="Keep Left">
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
     <center><img src="/images/laned-curve.jpg"/> <img src="/images/laned-road.jpg"/></center>
   <div class="content">
-      <span class="title"><h1>Keep Left</h1></span>
+      <span class="title"><h1>Keep Left</h2></span>
     <h2>In New Zealand, all traffic travels on the left hand side of the road.</h2>
   </div>
 </center>
@@ -689,7 +285,7 @@ $(function() {
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Overtaking</h1></span>
+      <span class="title"><h1>Overtaking</h2></span>
      <h2>You may overtake to the right of a slow vehicle if it is safe and you have at least 100m of clear road at all times while performing the manoeuvre. <br> Always indicate at least 3 seconds prior to overtaking.
     <br><br><b>You can't overtake:</b></br>
     <ul>
@@ -710,7 +306,7 @@ $(function() {
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
         <center><img src="/images/openroad.gif" height="72px" width="72px"/> <img src="/images/50kmph.gif" height="72px" width="72px"/></center>
   <div class="content">
-      <span class="title"><h1>Speed Limits Apply on New Zealand Roads</h1></span>
+      <span class="title"><h1>Speed Limits Apply on New Zealand Roads</h2></span>
   <h2>Whatever speed you travel at ensure there is enough room between you and the vehicle in front so you can stop suddenly if required.</h2>
     <br>
   <h2>New Zealand speed limits are in kilometres per hour not miles.</h2>
@@ -732,7 +328,7 @@ $(function() {
      <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>New Zealand Road Conditions</h1></span>
+      <span class="title"><h1>New Zealand Road Conditions</h2></span>
   <h2>New Zealand roads are very different than the ones you may be used to.</h2>
     <br>
   <h3>They are generally hilly, narrow and have many twists and turns.</h3>
@@ -748,11 +344,11 @@ $(function() {
      <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Gravel and Unsealed Roads</h1></span>
+      <span class="title"><h1>Gravel and Unsealed Roads</h2></span>
   <h2>Avoid unsealed roads wherever possible.</h2>
     <br>
   <h3>If you must drive on them, remember they are generally narrow. </h3>
-    <i>Drive slowly and when approaching oncoming traffic slow even further as dust can obscure your vision and stones can come up and chip or even crack your windscreen.</i>
+    <i>Road Status slowly and when approaching oncoming traffic slow even further as dust can obscure your vision and stones can come up and chip or even crack your windscreen.</i>
     <br>
     </div>
 </center>
@@ -763,7 +359,7 @@ $(function() {
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Motorways</h1></span>
+      <span class="title"><h1>Motorways</h2></span>
   <h2>Keep Left and always indicate at least three seconds before changing lanes.</h2>
     <br>
   <h2>The Maximum Speed Limit on New Zealand Motorways is 100km/h unless otherwise specified.</h2>
@@ -783,7 +379,7 @@ $(function() {
      <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Railway Crossings</h1></span>
+      <span class="title"><h1>Railway Crossings</h2></span>
   <h2>Always give way to all rail traffic. <br> </h2>
     <p>Some crossings are equipped with bells, sirens and barriers. <br>You must stop when these devices operate. <br>Signs are used at other crossings, you must not proceed unless <br>you are certain there is no rail traffic from either direction.</p>
     </div>
@@ -795,7 +391,7 @@ $(function() {
          <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Slippery Roads</h1></span>
+      <span class="title"><h1>Slippery Roads</h2></span>
   <h2>Slow down and drive with care on wet roads. <br> </h2>
     <p>New Zealand roads are very unforgiving, and they are potentially dangerous when wet. <br>Slow down and drive with care to prevent you from losing control.</p>
     </div>
@@ -807,7 +403,7 @@ $(function() {
 <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Drive to the Conditions on Icy Roads</h1></span>
+      <span class="title"><h1>Road Status to the Conditions on Icy Roads</h2></span>
   <h2>Snow and Ice can make roads very dangerous, especially around mountain passes</h2>
     <p>Rental car companies will provide chains if you are likely to drive in these conditions. <br>Slow Down and ensure you follow the instructions of roadsigns, police and/or road workers.
         <br>Avoid nonessential travel wherever possible. To find out about the latest conditions please check the road status in the drive section.</p>
@@ -820,7 +416,7 @@ $(function() {
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Animals on the Road</h1></span>
+      <span class="title"><h1>Animals on the Road</h2></span>
   <h2>If you come across farm animals on the road, slow down and do not sound your horn</h2>
     <p>You may have to stop to let them go past, slowly approach behind them and follow the farmer's instructions.</p>
     </div>
@@ -832,7 +428,7 @@ $(function() {
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Traffic Lights</h1></span>
+      <span class="title"><h1>Traffic Lights</h2></span>
   <h2>At traffic lights the following applies:</h2>
     <ul>
     <li><b>Red</b> means stop</li>
@@ -854,7 +450,7 @@ $(function() {
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
         <center><img src="/images/singlenane.jpg"/></center>
   <div class="content">
-      <span class="title"><h1>One Lane Bridges</h1></span>
+      <span class="title"><h1>One Lane Bridges</h2></span>
   <h2>Stop before approaching the bridge to ensure it is clear.</h2>
     <p>The circular sign with the red arrow means you have to give way to all oncoming traffic.
     <br>
@@ -869,7 +465,7 @@ $(function() {
             <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Roundabouts</h1></span>
+      <span class="title"><h1>Roundabouts</h2></span>
     <center><h2>Give way to all traffic to your <b>right</b></h2>
     <h2>Enter the roundabout to the <b>left</b></h2></center>
   <p>Signal at a roundabout if you plan to turn and when you pass the exit before the one you plan to take.</p>
@@ -883,7 +479,7 @@ $(function() {
      <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Parking Restrictions</h1></span>
+      <span class="title"><h1>Parking Restrictions</h2></span>
     <h2>Do not park on a broken yellow line
         <br>
         Do not park within 6 metres of an intersection or pedestrian crossing
@@ -903,7 +499,7 @@ $(function() {
          <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Pedestrian Crossings</h1></span>
+      <span class="title"><h1>Pedestrian Crossings</h2></span>
     <h2>Give way to pedestrians on both sides of the crossing</h2>
     <p>Slow Down when approaching and be prepared to stop</p>
   <p>Do not overtake near a crossing.</p>
@@ -916,7 +512,7 @@ $(function() {
          <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Intersections</h1></span>
+      <span class="title"><h1>Intersections</h2></span>
     <h2>Look in all directions, obey road signs and traffic lights. <br> If road signs don't determine who has right of way follow these rules:</h2>
         <ul>
     <li>If you are turning give way to vehicles going straight</li>
@@ -933,7 +529,7 @@ $(function() {
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Keep Left Unless Passing</h1></span>
+      <span class="title"><h1>Keep Left Unless Passing</h2></span>
     <h2>When a dual lane road is available use the left lane unless overtaking.</h2>
     <p>In passing bays, slow vehicle bays and passing lanes always use the left-most lane and allow others to pass.<br>Allow vehicles to pass you as soon as it is safe and practical to do so.</p>
     </div>
@@ -945,14 +541,14 @@ $(function() {
         <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Important Information</h1></span>
-    <h2>Drivers Licence:</h2>
+      <span class="title"><h1>Important Information</h2></span>
+    <h2>Road Statusrs Licence:</h2>
     <h4>You must have a current Licence and/or an international licence</h4>
     <h4>The minimum age for hiring a rental car is generally 21</h4>
     <br>
     <h2>Impaired Driving:</h2>
     <h4>Drugs and/or medication which can effect your driving is illegal</h4>
-    <h4>There is a zero alcohol limit for drivers under 20; <br>drivers over 20 are advised to consumer no more than two standard drinks before driving</h4>
+    <h4>There is a zero alcohol limit for drivers under 20; <br>Road Statusrs over 20 are advised to consumer no more than two standard drinks before driving</h4>
     <br>
     <h2>Seatbelts:</h2>
     <h4>You must wear seatbelts, failing to do so can incur a $150 fine</h4>

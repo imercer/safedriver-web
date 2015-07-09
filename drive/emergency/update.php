@@ -29,7 +29,7 @@
                 <span class="mdl-layout-title">SafeDriver</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="/learn/index.html" style="color: #EEE">Learn</a>
-                    <a class="mdl-navigation__link" href="/test/index.html" style="color: #EEE">Test</a>
+                    <a class="mdl-navigation__link" href="/test/index.html" style="color: #EEE">Quiz</a>
                     <a class="mdl-navigation__link" href="/drive/status.php" style="color: #EEE">Road Status</a>
                     <a class="mdl-navigation__link" href="" style="color: #EEE">Help</a>
                     <a class="mdl-navigation__link" href="" style="color: #EEE">About</a>
