@@ -115,12 +115,23 @@ body {
     color: #FFF;
   }
 </style>
+<script>
+    var uagent = navigator.userAgent.toLowerCase();
+
+    if (uagent.search("android") > -1 ) {
+       window.location = "slide3droid.html";       
+    } else {
+    
+    }
+
+    </script>    
+</script>
 </head>
 <center>
 <div class="card" style="width: 90%; margin:0 auto; text-align: left">
     <div class="image">
         <center>
-<video autoplay controls height="480" poster="Screenshot.png" loop muted>
+<video autoplay controls height="360" poster="/welcome/Screenshot.png" loop muted>
   <source src="/drive/NotificationsMP4.mp4" type="video/mp4">
   <source src="/drive/NotificationsOGG.ogg" type="video/ogg">
 Your browser does not support the video tag.

@@ -5,7 +5,7 @@ session_start();
 <html>
     <head>
 <link rel="stylesheet" href="/css/metro-bootstrap.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title>
-        <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">
+        <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">         <link rel="stylesheet" href="/css/card.css"><link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/metro.min.js"></script>
@@ -13,7 +13,7 @@ session_start();
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     </head>
-<body class="metro" style="padding-left: 20px;">
+<body class="metro">
         <div class="container">
         <nav class="navigation-bar dark">
             <nav class="navigation-bar-content">
@@ -27,9 +27,10 @@ session_start();
     </nav>
 </nav>
             <br>
-        <h1><a href="index.html"><img src="/images/Metro-Back-256.png" width="42px"></a>&nbsp;Quiz</h1>
+        <h1><a href="index.html"><img src="/images/Metro-Back-256.png" width="42px"></a>&nbsp;Quiz</h1><center>
         <br>
-        <h2>You got <?php echo $_SESSION['correct']?>/10 Correct</h2>
+            <div class="card" style="width: 80%"><div class="content">
+                <span class="title"> You got <?php echo $_SESSION['correct']?>/10 Correct</span>
         <br>
         <?php
         if ($_SESSION['roundaboutq'] == "Wrong") {
@@ -74,5 +75,7 @@ session_start();
             echo "<br>";
         }
         ?>
+                <br>
+                <br>
             <h2><b>To learn more about rules on New Zealand roads check out the <a href="/learn/index.html">Learn section</a></b></h2>
 </body>

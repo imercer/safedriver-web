@@ -2,7 +2,7 @@
 <html>
     <head>
 <link rel="stylesheet" href="/css/metro-bootstrap.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title>
-                <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">
+                <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">         <link rel="stylesheet" href="/css/card.css"><link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/metro.min.js"></script>
@@ -10,7 +10,7 @@
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     </head>
-<body class="metro" style="padding-left: 20px;">
+<body class="metro">
         <div class="container">
         <nav class="navigation-bar dark">
             <nav class="navigation-bar-content">
@@ -24,8 +24,11 @@
     </nav>
 </nav>
             <br>
-            <h1><a href="index.html"><img src="/images/Metro-Back-256.png" width="42px"></a>&nbsp;Quiz</h1>
+            <h1><a href="index.html"><img src="/images/Metro-Back-256.png" width="42px"></a>&nbsp;Quiz</h1><center>
             <br>
+            <center>
+            <div class="card" style="width: 90%; margin:0 auto; text-align: left">
+  <div class="content">
 <?php
 session_start();
         if (isset($_GET['side'])) {
@@ -42,15 +45,15 @@ session_start();
                                             $_SESSION['roundaboutanswer'] = $_GET['roundabout'];
                                             $_SESSION['roundaboutq'] = "Correct";
                                             $_SESSION['correct']++;
-                                            echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                                             echo "
                                             <br>
                                             <h2>At a roundabout you must give way to all vehicles to your right.</h2>
                                             <br>
-                                            <a href=\"finished.php\">
-                                            <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                            <div class=\"brand bg-black\">
-                                                <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                            <div class=\"action\"><center><a href=\"finished.php\">
+                                            Finished
+                                            </a>
+
                                             </div>
                                             </div>
                                             </div>
@@ -59,15 +62,14 @@ session_start();
                                             } else {
                                             $_SESSION['roundaboutanswer'] = $_GET['roundabout'];
                                             $_SESSION['roundaboutq'] = "Wrong";
-                                            echo "<h1>Incorrect</h1>";
+                        echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                                             echo "
                                             <br>
                                             <h2>At a roundabout you must give way to all vehicles to your right.</h2>
                                             <br>
-                                            <a href=\"finished.php\">
-                                            <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                            <div class=\"brand bg-black\">
-                                                <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                            <div class=\"action\"><center><a href=\"finished.php\">
+                                            Finished                                            </a>
+
                                             </div>
                                             </div>
                                             </div>
@@ -79,15 +81,15 @@ session_start();
                                             $_SESSION['onewayanswer'] = $_GET['oneway'];
                                             $_SESSION['onewayq'] = "Correct";
                                             $_SESSION['correct']++;
-                                            echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                                             echo "
                                             <br>
                                             <h2>You must stop and give way to all opposing traffic on and approaching the bridge</h2>
                                             <br>
-                                            <a href=\"quiz10.php\">
-                                            <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                            <div class=\"brand bg-black\">
-                                                <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                            <div class=\"action\"><center><a href=\"quiz10.php\">
+                                            Next Question
+                                            </a>
+
                                             </div>
                                             </div>
                                             </div>
@@ -96,15 +98,15 @@ session_start();
                                             } else {
                                             $_SESSION['onewayanswer'] = $_GET['oneway'];
                                             $_SESSION['onewayq'] = "Wrong";
-                                            echo "<h1>Incorrect</h1>";
+                        echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                                             echo "
                                             <br>
                                             <h2>You must stop and give way to all opposing traffic on and approaching the bridge</h2>
                                             <br>
-                                            <a href=\"quiz10.php\">
-                                            <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                            <div class=\"brand bg-black\">
-                                                <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                            <div class=\"action\"><center><a href=\"quiz10.php\">
+                                            Next Question
+                                            </a>
+
                                             </div>
                                             </div>
                                             </div>
@@ -117,15 +119,15 @@ session_start();
                                             $_SESSION['railcrossinganswer'] = $_GET['railcrossing'];
                                             $_SESSION['railcrossingq'] = "Correct";
                                             $_SESSION['correct']++;
-                                            echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                                             echo "
                                             <br>
                                             <h2>You must stop and give way to ALL railway traffic before proceeding across the level crossing</h2>
                                             <br>
-                                            <a href=\"quiz9.php\">
-                                            <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                            <div class=\"brand bg-black\">
-                                                <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                            <div class=\"action\"><center><a href=\"quiz9.php\">
+                                            Next Question
+                                            </a>
+
                                             </div>
                                             </div>
                                             </div>
@@ -134,15 +136,15 @@ session_start();
                                             } else {
                                            $_SESSION['railcrossinganswer'] = $_GET['railcrossing'];
                                             $_SESSION['railcrossingq'] = "Wrong";
-                                            echo "<h1>Incorrect</h1>";
+                        echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                                             echo "
                                             <br>
                                             <h2>You must STOP and give way to ALL railway traffic before proceeding across the level crossing</h2>
                                             <br>
-                                            <a href=\"quiz9.php\">
-                                            <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                            <div class=\"brand bg-black\">
-                                                <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                            <div class=\"action\"><center><a href=\"quiz9.php\">
+                                            Next Question
+                                            </a>
+
                                             </div>
                                             </div>
                                             </div>
@@ -155,15 +157,15 @@ session_start();
                                         $_SESSION['slowanswer'] = $_GET['slow'];
                                         $_SESSION['slowq'] = "Correct";
                                         $_SESSION['correct']++;
-                                        echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                                         echo "
                                         <br>
                                         <h2>If your speed is impeding following traffic you must pull as far left as possible to allow them to pass</h2>
                                         <br>
-                                        <a href=\"quiz8.php\">
-                                        <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                        <div class=\"brand bg-black\">
-                                            <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                        <div class=\"action\"><center><a href=\"quiz8.php\">
+                                        Next Question
+                                        </a>
+                    
                                         </div>
                                         </div>
                                         </div>
@@ -172,15 +174,15 @@ session_start();
                                         } else {
                                         $_SESSION['slowanswer'] = $_GET['slow'];
                                         $_SESSION['slowq'] = "Wrong";
-                                        echo "<h1>Incorrect</h1>";
+                    echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                                         echo "
                                         <br>
                                         <h2>If your speed is impeding following traffic you must pull as far left as possible to allow them to pass</h2>
                                         <br>
-                                        <a href=\"quiz8.php\">
-                                        <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                        <div class=\"brand bg-black\">
-                                            <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                        <div class=\"action\"><center><a href=\"quiz8.php\">
+                                        Next Question
+                                        </a>
+                    
                                         </div>
                                         </div>
                                         </div>
@@ -193,15 +195,15 @@ session_start();
                                 $_SESSION['passingscenarioanswer'] = $_GET['passingscenario'];
                                 $_SESSION['passingscenarioq'] = "Correct";
                                 $_SESSION['correct']++;
-                                echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                                 echo "
                                 <br>
                                 <h2>You can not pass on a solid yellow line</h2>
                                 <br>
-                                <a href=\"quiz7.php\">
-                                <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                <div class=\"brand bg-black\">
-                                    <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                <div class=\"action\"><center><a href=\"quiz7.php\">
+                                Next Question
+                                </a>
+            
                                 </div>
                                 </div>
                                 </div>
@@ -210,15 +212,15 @@ session_start();
                              } else {
                                                                 $_SESSION['passingscenarioanswer'] = $_GET['passingscenario'];
                                 $_SESSION['passingscenarioq'] = "Wrong";
-                                echo "<h1>Incorrect</h1>";
+            echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                                 echo "
                                 <br>
                                 <h2>You can not pass on a solid yellow line</h2>
                                 <br>
-                                <a href=\"quiz7.php\">
-                                <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                <div class=\"brand bg-black\">
-                                    <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                <div class=\"action\"><center><a href=\"quiz7.php\">
+                                Next Question
+                                </a>
+            
                                 </div>
                                 </div>
                                 </div>
@@ -231,15 +233,15 @@ session_start();
                                 $_SESSION['unitsanswer'] = $_GET['units'];
                                 $_SESSION['unitsq'] = "Correct";
                                 $_SESSION['correct']++;
-                                echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                                 echo "
                                 <br>
                                 <h2>In New Zealand our signs are in Metric. Speed is measured in Kilometres per Hour and Distances in metres and kilometres</h2>
                                 <br>
-                                <a href=\"quiz6.php\">
-                                <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                <div class=\"brand bg-black\">
-                                    <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                <div class=\"action\"><center><a href=\"quiz6.php\">
+                                Next Question
+                                </a>
+            
                                 </div>
                                 </div>
                                 </div>
@@ -248,15 +250,15 @@ session_start();
                              } else {
                                 $_SESSION['unitsanswer'] = $_GET['units'];
                                 $_SESSION['unitsq'] = "Wrong";
-                                echo "<h1>Incorrect</h1>";
+            echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                                 echo "
                                 <br>
                                 <h2>In New Zealand our signs are in Metric. Speed is measured in Kilometres per Hour and Distances in metres and kilometres</h2>
                                 <br>
-                                <a href=\"quiz6.php\">
-                                <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                <div class=\"brand bg-black\">
-                                    <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                <div class=\"action\"><center><a href=\"quiz6.php\">
+                                Next Question
+                                </a>
+            
                                 </div>
                                 </div>
                                 </div>
@@ -271,15 +273,15 @@ session_start();
                                 $_SESSION['givewayanswer'] = $_GET['giveway'];
                                 $_SESSION['givewayq'] = "Correct";
                                 $_SESSION['correct']++;
-                                echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                                 echo "
                                 <br>
                                 <h2>In New Zealand give way to all traffic on the straight through road when you are at a T intersection or driveway</h2>
                                 <br>
-                                <a href=\"quiz5.php\">
-                                <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                <div class=\"brand bg-black\">
-                                    <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                <div class=\"action\"><center><a href=\"quiz5.php\">
+                                Next Question
+                                </a>
+            
                                 </div>
                                 </div>
                                 </div>
@@ -288,15 +290,15 @@ session_start();
                              } else {
                                $_SESSION['givewayanswer'] = $_GET['giveway'];
                                 $_SESSION['givewayq'] = "Wrong";
-                                echo "<h1>Incorrect</h1>";
+            echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                                 echo "
                                 <br>
                                 <h2>In New Zealand give way to all traffic on the straight through road when you are at a T intersection or driveway</h2>
                                 <br>
-                                <a href=\"quiz5.php\">
-                                <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                <div class=\"brand bg-black\">
-                                    <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                <div class=\"action\"><center><a href=\"quiz5.php\">
+                                Next Question
+                                </a>
+            
                                 </div>
                                 </div>
                                 </div>
@@ -309,15 +311,15 @@ session_start();
                                 $_SESSION['passinganswer'] = $_GET['passing'];
                                 $_SESSION['correct']++;
                                 $_SESSION['passingq'] = "Correct";
-                                echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                                 echo "
                                 <br>
                                 <h2>In New Zealand you must have 100m of clear road while completing the entire passing manoeuvre</h2>
                                 <br>
-                                <a href=\"quiz4.php\">
-                                <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                <div class=\"brand bg-black\">
-                                    <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                <div class=\"action\"><center><a href=\"quiz4.php\">
+                                Next Question
+                                </a>
+            
                                 </div>
                                 </div>
                                 </div>
@@ -326,15 +328,15 @@ session_start();
                              } else {
                                 $_SESSION['passinganswer'] = $_GET['passing'];
                                 $_SESSION['passingq'] = "Wrong";
-                                echo "<h1>Incorrect</h1>";
+            echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                                 echo "
                                 <br>
                                 <h2>In New Zealand you must have 100m of clear road while completing the entire passing manoeuvre</h2>
                                 <br>
-                                <a href=\"quiz4.php\">
-                                <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                                <div class=\"brand bg-black\">
-                                    <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                                <div class=\"action\"><center><a href=\"quiz4.php\">
+                                Next Question
+                                </a>
+            
                                 </div>
                                 </div>
                                 </div>
@@ -346,15 +348,15 @@ session_start();
                     $_SESSION['speedsignanswer'] = $_GET['speedsign'];
                     $_SESSION['signq'] = "Correct";
                     $_SESSION['correct']++;
-                    echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                     echo "
                     <br>
                     <h2>In New Zealand this sign means the maximum speed limit is 50 kilometres per hour</h2>
                     <br>
-                    <a href=\"quiz3.php\">
-                    <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                    <div class=\"brand bg-black\">
-                        <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                    <div class=\"action\"><center><a href=\"quiz3.php\">
+                    Next Question
+                    </a>
+
                     </div>
                     </div>
                     </div>
@@ -363,15 +365,15 @@ session_start();
                  } else {
                     $_SESSION['speedsignanswer'] = $_GET['speedsign'];
                     $_SESSION['signq'] = "Wrong";
-                    echo "<h1>Incorrect</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                     echo "
                     <br>
                     <h2>In New Zealand this sign means the maximum speed limit is 50 kilometres per hour</h2>
                     <br>
-                    <a href=\"quiz3.php\">
-                    <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                    <div class=\"brand bg-black\">
-                        <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                    <div class=\"action\"><center><a href=\"quiz3.php\">
+                    Next Question
+                    </a>
+
                     </div>
                     </div>
                     </div>
@@ -385,15 +387,15 @@ session_start();
                     $_SESSION['sideq'] = "Correct";
                     $_SESSION['correct'] = 0;
                     $_SESSION['correct']++;
-                    echo "<h1>Correct</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#4CAF50\">Correct</h1></span>";
                     echo "
                     <br>
                     <h2>In New Zealand we Drive on the Left hand side of the road</h2>
                         <br>
-                    <a href=\"quiz2.php\">
-                    <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                    <div class=\"brand bg-black\">
-                        <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                    <div class=\"action\"><center><a href=\"quiz2.php\">
+                    Next Question
+                    </a>
+
                     </div>
                     </div>
                     </div>
@@ -403,15 +405,15 @@ session_start();
                     $_SESSION['sideanswer'] = $_GET['side'];
                     $_SESSION['correct'] = 0;
                     $_SESSION['sideq'] = "Wrong";
-                    echo "<h1>Incorrect</h1>";
+echo "<span class=\"title\"><h1 style=\"color:#E53935\">Incorrect</h1></span>";
                     echo "
                     <br>
                     <h2>In New Zealand we Drive on the Left hand side of the road</h2>
                         <br>
-                    <a href=\"quiz2.php\">
-                    <div class=\"tile bg-blue\" style=\"padding-left: 25px; float: left\">
-                    <div class=\"brand bg-black\">
-                        <span class=\"label fg-white\" style=\"text-align: left\">Next Question</span>
+                                    <div class=\"action\"><center><a href=\"quiz2.php\">
+                    Next Question
+                    </a>
+
                     </div>
                     </div>
                     </div>

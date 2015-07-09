@@ -74,6 +74,14 @@ for($x = 0; $x < $arrlength; $x++) {
         // Close the connection to the server
         fclose($fp);
 }
+
+$idfile = '/var/www/drivesafe/push/androidid';
+$msgfile = '/var/www/drivesafe/push/androidmsg';
+$currentid = file_get_contents($idfile);
+$newid = $currentid + 1;
+file_put_contents($msgfile, $message);
+sleep(5);
+file_put_contents($idfile, $newid);
             echo "<script language = \"javascript\" type=\"text/javascript\">";
             echo "window.location = \"messagesent.php?type=wet&number=$x\";";
             echo "</script>";

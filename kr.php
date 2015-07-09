@@ -14,7 +14,7 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     </head>
-<body class="metro" style="padding-left: 20px;">
+<body class="metro">
         <div class="container">
         <nav class="navigation-bar dark">
             <nav class="navigation-bar-content">
@@ -22,7 +22,7 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
     </nav>
 </nav>
             <br>
-<center>
+<center style="padding-left: 20px">
         <a href="kr/learn/index.html">
     <div class="tile double bg-cyan" style="padding-left: 25px; float: left">
         <div class="brand bg-black">

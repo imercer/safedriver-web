@@ -5,7 +5,7 @@ session_start();
 <html>
     <head>
 <link rel="stylesheet" href="/css/metro-bootstrap.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title>
-        <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">
+        <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">         <link rel="stylesheet" href="/css/card.css"><link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/metro.min.js"></script>
@@ -13,7 +13,7 @@ session_start();
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     </head>
-<body class="metro" style="padding-left: 20px;">
+<body class="metro">
         <div class="container">
         <nav class="navigation-bar dark">
             <nav class="navigation-bar-content">
@@ -27,25 +27,16 @@ session_start();
     </nav>
 </nav>
             <br>
-        <h1><a href="index.html"><img src="/images/Metro-Back-256.png" width="42px"></a>&nbsp;Quiz</h1>
-        <br>
-        <h2>What units are New Zealand Signs in?</h2>
+        <h1><a href="index.html"><img src="/images/Metro-Back-256.png" width="42px"></a>&nbsp;Quiz</h1><center>
+            <br>
+            <div class="card" style="width: 80%">    <div class="content">
+                <span class="title">What units are New Zealand Signs in?</span>
             <br>
             <br>
-        <a href="processor.php?side=<?php echo $_SESSION['sideanswer']?>&speedsign=<?php echo $_SESSION['speedsignanswer']?>&passing=<?php echo $_SESSION['passinganswer']?>&giveway=<?php echo $_SESSION['givewayanswer']?>&units=imperial">
-        <div class="tile bg-blue" style="padding-left: 25px; float: left">
-        <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">Imperial (miles)</span>
+            </div>
+                <div class="action"> <center>
+            <a href="processor.php?side=<?php echo $_SESSION['sideanswer']?>&speedsign=<?php echo $_SESSION['speedsignanswer']?>&passing=<?php echo $_SESSION['passinganswer']?>&giveway=<?php echo $_SESSION['givewayanswer']?>&units=imperial">Imperial (miles)</a>
+            <a href="processor.php?side=<?php echo $_SESSION['sideanswer']?>&speedsign=<?php echo $_SESSION['speedsignanswer']?>&passing=<?php echo $_SESSION['passinganswer']?>&giveway=<?php echo $_SESSION['givewayanswer']?>&units=metric">Metric (km)</a>
+            </div>
         </div>
-        </div>
-        </div>
-        </a>
-        <a href="processor.php?side=<?php echo $_SESSION['sideanswer']?>&speedsign=<?php echo $_SESSION['speedsignanswer']?>&passing=<?php echo $_SESSION['passinganswer']?>&giveway=<?php echo $_SESSION['givewayanswer']?>&units=metric">
-        <div class="tile bg-orange" style="padding-left: 25px; float: left">
-        <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">Metric (km)</span>
-        </div>
-        </div>
-        </div>
-        </a>
 </body>

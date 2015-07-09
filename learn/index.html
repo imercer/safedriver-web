@@ -2,13 +2,167 @@
 <html>
     <head>
 <link rel="stylesheet" href="/css/metro-bootstrap.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title>
-        <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">
+        <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">         <link rel="stylesheet" href="/css/card.css"><link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/metro.min.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <style>
+        .ui-widget.dialog {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: .8em;
+}
+
+.ui-widget-content.dialog {
+    background: #F9F9F9;
+    border: 1px solid #90d93f;
+    color: #222222;
+}
+
+.ui-dialog {
+    left: 0;
+    outline: 0 none;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+}
+
+.ui-dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    overflow: auto;
+    position: relative;
+    padding: 5px;
+    margin: 0;
+}
+
+.ui-dialog .ui-widget-header {
+    background: #fff;
+    border: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0.1em .5em;
+    position: relative;
+    font-size: 1em;
+}
+            
+                <style>
+/*
+Copyright 2015 Meorga.nl. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+html,
+body {
+        font-family: 'Roboto', sans-serif;
+        background: #eee;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+        margin: 0;
+        color: #2E2E3C;
+        line-height: 24px;
+        -webkit-font-smoothing: antialiased;
+}
+
+* {
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        text-rendering: optimizeLegibility;
+}
+
+*::-moz-selection {
+        color: #CFD8DC;
+        background: #009688;
+}
+
+*::selection {
+        color: #CFD8DC;
+        background: #009688;
+}
+
+*::-webkit-scrollbar {
+        width: 10px!important;
+        background: #FAFAFA;
+}
+
+*::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, .08);
+}
+
+*::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, .2);
+}
+/* End defaults*/
+.card {
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+    margin: 1px;
+    background: #FFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #272727;
+    border-radius: 2px;
+  }
+  .card .title {
+    line-height: 48px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .card .content {
+    padding: 20px;
+    font-weight: 300;
+    border-radius: 0 0 2px 2px;
+  }
+  .card p {
+    margin: 0;
+  }
+  .card .action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 20px;
+  }
+  .card a {
+    color: #ffab40;
+    margin-right: 20px;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .card .image {
+    position: absolute;
+  }
+  .card .image img {
+    border-radius: 2px 2px 0 0;
+    position: absolute;
+    width: 100%;
+    margin:0 auto;
+  }
+  .card .image .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: #FFF;
+  }
+</style>
+        </style>
 <script>
 $(function() {
     $( "#left" ).dialog({
@@ -292,7 +446,7 @@ $(function() {
   });  
 </script>
     </head>
-    <body class="metro" style="padding-left: 20px;">
+    <body class="metro">
         <div class="container">
         <nav class="navigation-bar dark">
             <nav class="navigation-bar-content">
@@ -305,6 +459,7 @@ $(function() {
                 <a href="../drive/index.html" style="color: #FFF"><item class="element">Drive</item></a>  
     </nav>
 </nav>
+            <br>
         <h1>Learn</h1>
         <button id="lefter" style="color: #FFF; background-color: #FFF">
     <div class="tile" style="padding-left: 25px; float: left">
@@ -389,7 +544,7 @@ $(function() {
         <div class="tile-content image">
         <img style="padding-top: 10px" src="/images/ice.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">Drive Carefully on Snowy Roads</span>
+            <span class="label fg-white" style="text-align: left">Winter Driving Conditions can be Dangerous</span>
         </div>
         </div>
         </div>
@@ -505,7 +660,7 @@ $(function() {
         </div>
         </button> 
         <button id="video" style="color: #FFF; background-color: #FFF">
-        <div class="tile bg-amber">
+        <div class="tile">
             <div class="tile-content image">
             <img src="/images/player.png">
             </div>
@@ -517,11 +672,25 @@ $(function() {
         </div>
     </body>
 <div id="left" title="Keep Left">
-  <h2>In New Zealand, all traffic travels on the left hand side of the road.</h2>
+    <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
     <center><img src="/images/laned-curve.jpg"/> <img src="/images/laned-road.jpg"/></center>
+  <div class="content">
+      <span class="title"><h1>Keep Left</h1></span>
+    <h2>In New Zealand, all traffic travels on the left hand side of the road.</h2>
+  </div>
+</center>
+    </div>
+    </center>
+</div>
+  
 </div>
 <div id="overtake" title="Overtaking">
-  <h2>You may overtake to the right of a slow vehicle if it is safe and you have at least 100m of clear road at all times while performing the manoeuvre. <br> Always indicate at least 3 seconds prior to overtaking.
+    <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Overtaking</h1></span>
+     <h2>You may overtake to the right of a slow vehicle if it is safe and you have at least 100m of clear road at all times while performing the manoeuvre. <br> Always indicate at least 3 seconds prior to overtaking.
     <br><br><b>You can't overtake:</b></br>
     <ul>
     <li><h3>At a no-overtaking line marked by a yellow line on your side of the centreline</h3></li>
@@ -529,8 +698,19 @@ $(function() {
         <li><h3>At a curve or crest of a hill where you do not have 100m of clear road during the entire manoeuvre and can't conduct the pass safely.</h3></li>
         </ul>
     </h2>
+  </div>
+</center>
+    </div>
+    </center>
+</div>
+ 
 </div>
 <div id="speed" title="Speed Limits Apply on New Zealand Roads">
+        <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+        <center><img src="/images/openroad.gif" height="72px" width="72px"/> <img src="/images/50kmph.gif" height="72px" width="72px"/></center>
+  <div class="content">
+      <span class="title"><h1>Speed Limits Apply on New Zealand Roads</h1></span>
   <h2>Whatever speed you travel at ensure there is enough room between you and the vehicle in front so you can stop suddenly if required.</h2>
     <br>
   <h2>New Zealand speed limits are in kilometres per hour not miles.</h2>
@@ -543,8 +723,16 @@ $(function() {
     <li>Heavy Vehicles 90km/h</li>
     <li>Vehicle's towing caravans and/or trailers 90km/h</li>
     </ul>
-    <center><img src="/images/openroad.gif" height="128px" width="128px"/> <img src="/images/50kmph.gif" height="128px" width="128px"/></center></div>
+    </div>
+</center>
+    </div>
+    </center>
+</div>
 <div id="turns" title="New Zealand Road Conditions">
+     <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>New Zealand Road Conditions</h1></span>
   <h2>New Zealand roads are very different than the ones you may be used to.</h2>
     <br>
   <h3>They are generally hilly, narrow and have many twists and turns.</h3>
@@ -552,14 +740,30 @@ $(function() {
   <p>Although our roads are generally well-sealed there are still many gravel roads, slow down and drive to the conditions</p>
     <p>Give yourself plenty of time to arrive at your destination and assume it will take longer than anticipated.</p>
     </div>
+</center>
+    </div>
+    </center>
+</div>
 <div id="gravel" title="Gravel and Unsealed Roads">
+     <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Gravel and Unsealed Roads</h1></span>
   <h2>Avoid unsealed roads wherever possible.</h2>
     <br>
   <h3>If you must drive on them, remember they are generally narrow. </h3>
     <i>Drive slowly and when approaching oncoming traffic slow even further as dust can obscure your vision and stones can come up and chip or even crack your windscreen.</i>
     <br>
     </div>
+</center>
+    </div>
+    </center>
+</div>
 <div id="motorways" title="Motorways">
+    <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Motorways</h1></span>
   <h2>Keep Left and always indicate at least three seconds before changing lanes.</h2>
     <br>
   <h2>The Maximum Speed Limit on New Zealand Motorways is 100km/h unless otherwise specified.</h2>
@@ -571,28 +775,64 @@ $(function() {
     <li>Make a U Turn</li>
     </ul>
     </div>
+</center>
+    </div>
+    </center>
+</div>
 <div id="railwaycrossing" title="Railway Crossings">
+     <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Railway Crossings</h1></span>
   <h2>Always give way to all rail traffic. <br> </h2>
     <p>Some crossings are equipped with bells, sirens and barriers. <br>You must stop when these devices operate. <br>Signs are used at other crossings, you must not proceed unless <br>you are certain there is no rail traffic from either direction.</p>
     </div>
-<div id="slipperydialog" title="Slippery Roads">
-  <h2>Slow Down and Drive with Care on wet roads. <br> </h2>
-    <p>New Zealand roads are very unforgiving, and they are potentially dangerous when they are wet. <br>Slow Down and Drive with Care to prevent you from losing control.</p>
+</center>
     </div>
+    </center>
+</div>
+<div id="slipperydialog" title="Slippery Roads">
+         <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Slippery Roads</h1></span>
+  <h2>Slow down and drive with care on wet roads. <br> </h2>
+    <p>New Zealand roads are very unforgiving, and they are potentially dangerous when wet. <br>Slow down and drive with care to prevent you from losing control.</p>
+    </div>
+</center>
+    </div>
+    </center>
 </div>
 <div id="icyroads" title="Drive to the Conditions on icy roads">
+<center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Drive to the Conditions on Icy Roads</h1></span>
   <h2>Snow and Ice can make roads very dangerous, especially around mountain passes</h2>
-    <center>
-    <p>Rental car companies will provide chains if you are likely to drive in these conditions. <br>Slow Down and ensure you follow the instructions of roadsigns, police and/or road workers.</p>
-        </center>
+    <p>Rental car companies will provide chains if you are likely to drive in these conditions. <br>Slow Down and ensure you follow the instructions of roadsigns, police and/or road workers.
+        <br>Avoid nonessential travel wherever possible. To find out about the latest conditions please check the road status in the drive section.</p>
     </div>
+</center>
+    </div>
+    </center>
 </div>
 <div id="animalsroad" title="Animals on the Road">
+    <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Animals on the Road</h1></span>
   <h2>If you come across farm animals on the road, slow down and do not sound your horn</h2>
     <p>You may have to stop to let them go past, slowly approach behind them and follow the farmer's instructions.</p>
     </div>
+</center>
+    </div>
+    </center>
 </div>
 <div id="trafficlight" title="Traffic Lights">
+    <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Traffic Lights</h1></span>
   <h2>At traffic lights the following applies:</h2>
     <ul>
     <li><b>Red</b> means stop</li>
@@ -605,39 +845,78 @@ $(function() {
     </ul>
     <i>You must signal at least 3 seconds before turning</i>
     </div>
+</center>
+    </div>
+    </center>
+</div>
 <div id="onebridge" title="One Lane Bridges">
+        <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+        <center><img src="/images/singlenane.jpg"/></center>
+  <div class="content">
+      <span class="title"><h1>One Lane Bridges</h1></span>
   <h2>Stop before approaching the bridge to ensure it is clear.</h2>
     <p>The circular sign with the red arrow means you have to give way to all oncoming traffic.
     <br>
     <br>
     The rectangular sign with the large arrow in your direction means you have the right of way.<br> If a vehicle is on the bridge or can't stop you must give way.</p>
-    <center><img src="/images/singlenane.jpg"/></center>
     </div>
+</center>
+    </div>
+    </center>
+</div>
 <div id="roundabout" title="Roundabouts">
-    <center><h2>Give way to all traffic to your right</h2>
-    <h2>Enter the roundabout to the LEFT</h2></center>
+            <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Roundabouts</h1></span>
+    <center><h2>Give way to all traffic to your <b>right</b></h2>
+    <h2>Enter the roundabout to the <b>left</b></h2></center>
   <p>Signal at a roundabout if you plan to turn and when you pass the exit before the one you plan to take.</p>
     <p>
     </div>
+</center>
+    </div>
+    </center>
+</div>
 <div id="parkiner" title="Parking Restrictions">
-    <h2>Do Not park on a broken yellow line
+     <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Parking Restrictions</h1></span>
+    <h2>Do not park on a broken yellow line
         <br>
-        Do Not park within 6 metres of an intersection or pedestrian crossing
+        Do not park within 6 metres of an intersection or pedestrian crossing
         <br>
-        Do Not park facing oncoming traffic</h2>
+        Do not park facing oncoming traffic</h2>
     <br>
     <img src="/images/clearway.gif" width="100px"/> Do not stop or park in the area marked by No Stopping Signs.<br><br>
     <img src="/images/clearwaydate.gif" width="100px"/> Do not stop or park in the area marked by No Stopping Signs during the time specified.<br><br>
     <img src="/images/parkingtime.gif" width="100px" align="left"/>&nbsp; You may park for up to 60 minutes in the location indicated by the sign. <br>&nbsp; The number on the sign represents the number of minutes you are allowed to park in that location for.<br><br>
     <p>
     </div>
+</center>
+    </div>
+    </center>
+</div>
 <div id="pedcrossing" title="Pedestrian Crossings">
-    <center><h2>Give way to pedestrians on both sides of the crossing</h2>
+         <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Pedestrian Crossings</h1></span>
+    <h2>Give way to pedestrians on both sides of the crossing</h2>
     <p>Slow Down when approaching and be prepared to stop</p>
   <p>Do not overtake near a crossing.</p>
+    </div>
 </center>
+    </div>
+    </center>
 </div>
 <div id="inter" title="Intersections">
+         <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Intersections</h1></span>
     <h2>Look in all directions, obey road signs and traffic lights. <br> If road signs don't determine who has right of way follow these rules:</h2>
         <ul>
     <li>If you are turning give way to vehicles going straight</li>
@@ -645,12 +924,28 @@ $(function() {
     <li>At a T intersection and driveways the side road must give way to traffic on the straight road</li>
     <li>Otherwise give way to vehicles coming from your right.</li>
     </ul>
+    </div>
+</center>
+    </div>
+    </center>
 </div>
 <div id="passer" title="Keep Left Unless Passing">
+    <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Keep Left Unless Passing</h1></span>
     <h2>When a dual lane road is available use the left lane unless overtaking.</h2>
     <p>In passing bays, slow vehicle bays and passing lanes always use the left-most lane and allow others to pass.<br>Allow vehicles to pass you as soon as it is safe and practical to do so.</p>
+    </div>
+</center>
+    </div>
+    </center>
 </div>
 <div id="information" title="Important Information">
+        <center>
+<div class="card" style="width: 100%; margin:0 auto; text-align: left">
+  <div class="content">
+      <span class="title"><h1>Important Information</h1></span>
     <h2>Drivers Licence:</h2>
     <h4>You must have a current Licence and/or an international licence</h4>
     <h4>The minimum age for hiring a rental car is generally 21</h4>
@@ -666,12 +961,14 @@ $(function() {
     <h4>You must not use a mobile phone while driving unless it is completely hands free <br>or mounted to the vehicle and touched infrequently.</h4>
     <br>
     <h2>Crashes:</h2>
-    <h4>If you are involved in a crash you must stop and call the police (111) if someone is hurt.<br>Obtain vehicle registration numbers and notify the insurance company and/or rental car company within 24 hours. <br>If no one is hurt give your name and address to the property owner or the police if the owner cant be located.</h4>
+    <h4>If you are involved in a crash you must stop and call the police (111) if someone is injured.<br>Obtain vehicle registration numbers and notify the insurance company and/or rental car company within 24 hours. <br>If no one is hurt give your name and address to the property owner or the police if the owner cant be located.</h4>
+    </div>
+</center>
+    </div>
+    </center>
 </div>
 <div id="videoplayer" title="Video">
-    <video width="720px" controls>
-  <source src="envideo.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
+    <iframe width="640" height="480" src="https://www.youtube.com/embed/wPzjUGor9LM?rel=0" frameborder="0" allowfullscreen></iframe>
 </video>
 </div>
 </html>

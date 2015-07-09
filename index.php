@@ -16,7 +16,7 @@
 }    
     </style>
     </head>
-<body class="metro" style="padding-left: 20px;">
+<body class="metro">
     <?php
 $cookie_name = "lang";
 if(isset($_COOKIE[$cookie_name])) {
