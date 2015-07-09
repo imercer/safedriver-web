@@ -24,11 +24,11 @@ $cookie_name = "lang";
 if(isset($_COOKIE[$cookie_name])) {
     $lang = $_COOKIE[$cookie_name];
     echo "<script language = \"javascript\" type=\"text/javascript\">";
-    //echo "window.location = \"/$lang.php\";";
+    echo "window.location = \"/$lang.php\";";
     echo "</script>";       
 } else {
     echo "<script language = \"javascript\" type=\"text/javascript\">";
-    //echo "window.location = \"/welcome/languageselect.html\";";
+    echo "window.location = \"/welcome/languageselect.html\";";
     echo "</script>";    
 }
 ?>
