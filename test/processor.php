@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-<link rel="stylesheet" href="/css/metro-bootstrap.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title>
+<link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title>
                 <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">         <link rel="stylesheet" href="/css/card.css"><link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
@@ -20,7 +20,7 @@
         <item class="element-divider"></item>
                 <a href="../test/index.html" style="color: #FFF"><item class="element">Test</item></a>     
         <item class="element-divider"></item>
-                <a href="../drive/index.html" style="color: #FFF"><item class="element">Drive</item></a>  
+                <a href="../drive/status.php" style="color: #FFF"><item class="element">Drive</item></a>  
     </nav>
 </nav>
             <br>
