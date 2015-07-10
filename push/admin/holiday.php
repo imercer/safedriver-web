@@ -90,7 +90,7 @@ $cb = \Codebird\Codebird::getInstance();
 $cb->setToken("3174625284-PueDjm5YbE7oeS8xoYsZUFsdnGkkXhsp4dboPN0", "tUlkwD6j7j8tpbTK4qI9QrdAXaKfGddIZNkk6ejj2tKyJ");
  
 $params = array(
-  'status' => "$message";
+  'status' => "$message"
 );
 $reply = $cb->statuses_update($params);
 $status = $reply->httpstatus;

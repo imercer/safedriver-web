@@ -6,7 +6,7 @@
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/metro.min.js"></script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="/css/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     </head>
@@ -21,7 +21,7 @@
             <h1><a href="index.php"><img src="/images/Metro-Back-256.png" width="42px"></a>&nbsp;Send a Message</h1>
                 <b>Message Type: </b><?php echo $_GET['ref'];?>
                 <br>
-                <form method="get" action="<?php echo $_GET['ref'];?>.php"><b>Message Text: </b><textarea name="message" rows="10" cols="30">
+                <form method="get" action="<?php echo $_GET['ref'];?>.php"><b>Message Text: </b><textarea name="message" rows="10" cols="30" maxlength="140">
 </textarea>
                                     <br>
 <input type="submit" value="Submit">

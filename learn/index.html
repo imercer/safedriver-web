@@ -9,7 +9,7 @@
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/materialize.js"></script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="/css/jquery-ui.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <link rel="stylesheet" href="/css/card.css"/>
@@ -39,14 +39,14 @@
                      -->
                 </div>
               </header>
-              <div class="mdl-layout__drawer" style="background-color: rgb(51,51,51); border: 0; height: 100%">
+              <div class="mdl-layout__drawer" style="background-color: rgb(51,51,51); border: 0; height: 100%; position: fixed">
                   <span class="mdl-layout-title"><a href="/index.php" style="color: #EEE">SafeDriver</a></span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="/learn/index.html" style="color: #EEE">Learn</a>
                     <a class="mdl-navigation__link" href="/test/index.html" style="color: #EEE">Quiz</a>
                     <a class="mdl-navigation__link" href="/drive/status.php" style="color: #EEE"><div class="mdl-badge" data-badge="!">Road Status</div></a>
                     <a class="mdl-navigation__link" href="" style="color: #EEE">Help</a>
-                    <a class="mdl-navigation__link" href="" style="color: #EEE">About</a>
+                    <a class="mdl-navigation__link" href="/settings/" style="color: #EEE">Settings</a>
                 </nav>
               </div>
             </div>
@@ -55,7 +55,7 @@
         <br>
         <br>
         <div style="padding-left: 10px">
-        <button id="lefter" style="color: #FFF; background-color: #FFF">
+        <a href="keepleft.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/keep-left.gif">
@@ -64,16 +64,16 @@
         </div>
         </div>
         </div>
-        </button>
-        <button id="speeder" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="speedlimits.html">
         <div class="tile" data-role="live-tile" data-effect="slideUp">
         <div class="tile-content image"><img src="/images/50kmph.gif"></div>
         <div class="brand bg-black">
             <span class="label fg-white" style="text-align: left">Speed Limits apply on New Zealand Roads</span>
         </div>
         </div>
-        </button>
-        <button id="turnsopener" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="conditions.html">
             <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/windy.gif">
@@ -82,8 +82,8 @@
         </div>
         </div>
         </div>
-        </button>
-        <button id="gravelroads" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="unsealed.html">
             <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/gravel.gif">
@@ -92,8 +92,8 @@
         </div>
         </div>
         </div>
-        </button>
-        <button id="overtaker" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="overtaking.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/overtaking.png">
@@ -102,8 +102,8 @@
         </div>
         </div>
         </div>
-        </button>
-        <button id="motorwaysopen" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="motorways.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/motorways.jpg">
@@ -112,8 +112,8 @@
         </div>
         </div>
         </div>
-        </button>
-       <button id="railway" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="railwaycrossings.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/railway-cross-sign.gif">
@@ -122,8 +122,8 @@
         </div>
         </div>
         </div>
-        </button>
-       <button id="slippery" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="slipperyroads.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/slippery.gif">
@@ -132,8 +132,8 @@
         </div>
         </div>
         </div>
-        </button>
-       <button id="ice" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="icyroads.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img style="padding-top: 10px" src="/images/ice.gif">
@@ -142,8 +142,8 @@
         </div>
         </div>
         </div>
-        </button>        
-    <button id="animals" style="color: #FFF; background-color: #FFF">
+        </a>        
+        <a href="animals.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/animals.gif">
@@ -152,8 +152,8 @@
         </div>
         </div>
         </div>
-        </button>
-         <button id="traffic" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="trafficlights.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/trafficlight.png">
@@ -162,8 +162,8 @@
         </div>
         </div>
         </div>
-        </button>
-  <button id="oneway" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="onelane.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/oneway.gif">
@@ -172,8 +172,8 @@
         </div>
         </div>
         </div>
-        </button>
-      <button style="color: #FFF; background-color: #FFF">
+        </a>
+      <a>
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/stop.gif">
@@ -182,8 +182,8 @@
         </div>
         </div>
         </div>
-        </button>
-      <button style="color: #FFF; background-color: #FFF">
+        </a>
+      <a>
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/giveway.gif">
@@ -192,8 +192,8 @@
         </div>
         </div>
         </div>
-        </button>
-    <button id="roundabouts" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="roundabouts.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/roundabout-sign.gif">
@@ -202,8 +202,8 @@
         </div>
         </div>
         </div>
-        </button>
-    <button id="parking" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="parking.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/parking.png">
@@ -212,8 +212,8 @@
         </div>
         </div>
         </div>
-        </button>
-    <button id="crossings" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="pedcrossing.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/pedestrian.gif">
@@ -222,8 +222,8 @@
         </div>
         </div>
         </div>
-        </button>     
-    <button id="intersection" style="color: #FFF; background-color: #FFF">
+        </a>     
+        <a href="intersections.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/intersection.jpg">
@@ -232,8 +232,8 @@
         </div>
         </div>
         </div>
-        </button> 
-    <button id="passing" style="color: #FFF; background-color: #FFF">
+        </a> 
+        <a href="passing.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/passing.gif">
@@ -242,8 +242,8 @@
         </div>
         </div>
         </div>
-        </button> 
-    <button id="info" style="color: #FFF; background-color: #FFF">
+        </a> 
+        <a href="information.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/info.png">
@@ -252,8 +252,8 @@
         </div>
         </div>
         </div>
-        </button> 
-        <button id="video" style="color: #FFF; background-color: #FFF">
+        </a> 
+        <a href="video.html">
         <div class="tile">
             <div class="tile-content image">
             <img src="/images/player.png">
@@ -262,18 +262,19 @@
                 <span class="label fg-white" style="text-align: left">Watch Video</span>
             </div>
         </div>
-        </button>
+        </a>
         </div>
         </div>
         </div>
     </body>
+<!--
 <div id="left" title="Keep Left">
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
     <center><img src="/images/laned-curve.jpg"/> <img src="/images/laned-road.jpg"/></center>
   <div class="content">
-      <span class="title"><h1>Keep Left</h2></span>
-    <h2>In New Zealand, all traffic travels on the left hand side of the road.</h2>
+      <span class="title"><h2>Keep Left</h4></span>
+    <h4>In New Zealand, all traffic travels on the left hand side of the road.</h4>
   </div>
 </center>
     </div>
@@ -285,15 +286,15 @@
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Overtaking</h2></span>
-     <h2>You may overtake to the right of a slow vehicle if it is safe and you have at least 100m of clear road at all times while performing the manoeuvre. <br> Always indicate at least 3 seconds prior to overtaking.
+      <span class="title"><h2>Overtaking</h4></span>
+     <h4>You may overtake to the right of a slow vehicle if it is safe and you have at least 100m of clear road at all times while performing the manoeuvre. <br> Always indicate at least 3 seconds prior to overtaking.
     <br><br><b>You can't overtake:</b></br>
     <ul>
-    <li><h3>At a no-overtaking line marked by a yellow line on your side of the centreline</h3></li>
-    <li><h3>Near a pedestrian crossing, railway crossing or intersection</h3></li>
-        <li><h3>At a curve or crest of a hill where you do not have 100m of clear road during the entire manoeuvre and can't conduct the pass safely.</h3></li>
+    <li><h4>At a no-overtaking line marked by a yellow line on your side of the centreline</h4></li>
+    <li><h4>Near a pedestrian crossing, railway crossing or intersection</h4></li>
+        <li><h4>At a curve or crest of a hill where you do not have 100m of clear road during the entire manoeuvre and can't conduct the pass safely.</h4></li>
         </ul>
-    </h2>
+    </h4>
   </div>
 </center>
     </div>
@@ -306,14 +307,14 @@
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
         <center><img src="/images/openroad.gif" height="72px" width="72px"/> <img src="/images/50kmph.gif" height="72px" width="72px"/></center>
   <div class="content">
-      <span class="title"><h1>Speed Limits Apply on New Zealand Roads</h2></span>
-  <h2>Whatever speed you travel at ensure there is enough room between you and the vehicle in front so you can stop suddenly if required.</h2>
+      <span class="title"><h2>Speed Limits Apply on New Zealand Roads</h4></span>
+  <h4>Whatever speed you travel at ensure there is enough room between you and the vehicle in front so you can stop suddenly if required.</h4>
     <br>
-  <h2>New Zealand speed limits are in kilometres per hour not miles.</h2>
+  <h4>New Zealand speed limits are in kilometres per hour not miles.</h4>
     <br>
-  <h2>Built up areas generally have speed limits of 50km/h however lower limits may apply.</h2>
+  <h4>Built up areas generally have speed limits of 50km/h however lower limits may apply.</h4>
     <br>
-  <h2>"OPEN ROAD" limits are as follows</h2>
+  <h4>"OPEN ROAD" limits are as follows</h4>
     <ul>
     <li>Cars, Motorcycles and Vans 100km/h</li>
     <li>Heavy Vehicles 90km/h</li>
@@ -328,11 +329,12 @@
      <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>New Zealand Road Conditions</h2></span>
-  <h2>New Zealand roads are very different than the ones you may be used to.</h2>
-    <br>
-  <h3>They are generally hilly, narrow and have many twists and turns.</h3>
-    <br>
+          <div class="demo-grid-2 mdl-grid">
+      <div class="mdl-cell mdl-cell--6-col"><span class="title"><h2>New Zealand Road Conditions</h4></span></div>
+      <div class="mdl-cell mdl-cell--1-col" style="text-align: right"><button style="background-color: rgba(0,0,0,0)" id="close" onclick="$(this).closest('.ui-dialog-content').dialog('close'); ">Done</a></div>
+    </div>
+  <h4>New Zealand roads are very different than the ones you may be used to.</h4>
+  <h4>They are generally hilly, narrow and have many twists and turns.</h4>
   <p>Although our roads are generally well-sealed there are still many gravel roads, slow down and drive to the conditions</p>
     <p>Give yourself plenty of time to arrive at your destination and assume it will take longer than anticipated.</p>
     </div>
@@ -344,11 +346,11 @@
      <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Gravel and Unsealed Roads</h2></span>
-  <h2>Avoid unsealed roads wherever possible.</h2>
+      <span class="title"><h2>Gravel and Unsealed Roads</h4></span>
+  <h4>Avoid unsealed roads wherever possible.</h4>
     <br>
-  <h3>If you must drive on them, remember they are generally narrow. </h3>
-    <i>Road Status slowly and when approaching oncoming traffic slow even further as dust can obscure your vision and stones can come up and chip or even crack your windscreen.</i>
+  <h4>If you must drive on them, remember they are generally narrow. </h4>
+    <i>Drive slowly and when approaching oncoming traffic slow even further as dust can obscure your vision and stones can come up and chip or even crack your windscreen.</i>
     <br>
     </div>
 </center>
@@ -359,12 +361,12 @@
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Motorways</h2></span>
-  <h2>Keep Left and always indicate at least three seconds before changing lanes.</h2>
+      <span class="title"><h2>Motorways</h4></span>
+  <h4>Keep Left and always indicate at least three seconds before changing lanes.</h4>
     <br>
-  <h2>The Maximum Speed Limit on New Zealand Motorways is 100km/h unless otherwise specified.</h2>
+  <h4>The Maximum Speed Limit on New Zealand Motorways is 100km/h unless otherwise specified.</h4>
     <br>
-  <h2>On a Motorway you can not</h2>
+  <h4>On a Motorway you can not</h4>
     <ul>
     <li>Walk or Cycle</li>
     <li>Stop</li>
@@ -379,8 +381,8 @@
      <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Railway Crossings</h2></span>
-  <h2>Always give way to all rail traffic. <br> </h2>
+      <span class="title"><h2>Railway Crossings</h4></span>
+  <h4>Always give way to all rail traffic. <br> </h4>
     <p>Some crossings are equipped with bells, sirens and barriers. <br>You must stop when these devices operate. <br>Signs are used at other crossings, you must not proceed unless <br>you are certain there is no rail traffic from either direction.</p>
     </div>
 </center>
@@ -391,8 +393,8 @@
          <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Slippery Roads</h2></span>
-  <h2>Slow down and drive with care on wet roads. <br> </h2>
+      <span class="title"><h2>Slippery Roads</h4></span>
+  <h4>Slow down and drive with care on wet roads. <br> </h4>
     <p>New Zealand roads are very unforgiving, and they are potentially dangerous when wet. <br>Slow down and drive with care to prevent you from losing control.</p>
     </div>
 </center>
@@ -403,8 +405,8 @@
 <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Road Status to the Conditions on Icy Roads</h2></span>
-  <h2>Snow and Ice can make roads very dangerous, especially around mountain passes</h2>
+      <span class="title"><h2>Drive to the Conditions on Icy Roads</h4></span>
+  <h4>Snow and Ice can make roads very dangerous, especially around mountain passes</h4>
     <p>Rental car companies will provide chains if you are likely to drive in these conditions. <br>Slow Down and ensure you follow the instructions of roadsigns, police and/or road workers.
         <br>Avoid nonessential travel wherever possible. To find out about the latest conditions please check the road status in the drive section.</p>
     </div>
@@ -416,8 +418,8 @@
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Animals on the Road</h2></span>
-  <h2>If you come across farm animals on the road, slow down and do not sound your horn</h2>
+      <span class="title"><h2>Animals on the Road</h4></span>
+  <h4>If you come across farm animals on the road, slow down and do not sound your horn</h4>
     <p>You may have to stop to let them go past, slowly approach behind them and follow the farmer's instructions.</p>
     </div>
 </center>
@@ -428,8 +430,8 @@
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Traffic Lights</h2></span>
-  <h2>At traffic lights the following applies:</h2>
+      <span class="title"><h2>Traffic Lights</h4></span>
+  <h4>At traffic lights the following applies:</h4>
     <ul>
     <li><b>Red</b> means stop</li>
     <li><b>Yellow</b> means stop if it safe to do so</li>
@@ -450,8 +452,8 @@
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
         <center><img src="/images/singlenane.jpg"/></center>
   <div class="content">
-      <span class="title"><h1>One Lane Bridges</h2></span>
-  <h2>Stop before approaching the bridge to ensure it is clear.</h2>
+      <span class="title"><h2>One Lane Bridges</h4></span>
+  <h4>Stop before approaching the bridge to ensure it is clear.</h4>
     <p>The circular sign with the red arrow means you have to give way to all oncoming traffic.
     <br>
     <br>
@@ -465,9 +467,9 @@
             <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Roundabouts</h2></span>
-    <center><h2>Give way to all traffic to your <b>right</b></h2>
-    <h2>Enter the roundabout to the <b>left</b></h2></center>
+      <span class="title"><h2>Roundabouts</h4></span>
+    <center><h4>Give way to all traffic to your <b>right</b></h4>
+    <h4>Enter the roundabout to the <b>left</b></h4></center>
   <p>Signal at a roundabout if you plan to turn and when you pass the exit before the one you plan to take.</p>
     <p>
     </div>
@@ -479,12 +481,12 @@
      <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Parking Restrictions</h2></span>
-    <h2>Do not park on a broken yellow line
+      <span class="title"><h2>Parking Restrictions</h4></span>
+    <h4>Do not park on a broken yellow line
         <br>
         Do not park within 6 metres of an intersection or pedestrian crossing
         <br>
-        Do not park facing oncoming traffic</h2>
+        Do not park facing oncoming traffic</h4>
     <br>
     <img src="/images/clearway.gif" width="100px"/> Do not stop or park in the area marked by No Stopping Signs.<br><br>
     <img src="/images/clearwaydate.gif" width="100px"/> Do not stop or park in the area marked by No Stopping Signs during the time specified.<br><br>
@@ -499,8 +501,8 @@
          <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Pedestrian Crossings</h2></span>
-    <h2>Give way to pedestrians on both sides of the crossing</h2>
+      <span class="title"><h2>Pedestrian Crossings</h4></span>
+    <h4>Give way to pedestrians on both sides of the crossing</h4>
     <p>Slow Down when approaching and be prepared to stop</p>
   <p>Do not overtake near a crossing.</p>
     </div>
@@ -512,8 +514,8 @@
          <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Intersections</h2></span>
-    <h2>Look in all directions, obey road signs and traffic lights. <br> If road signs don't determine who has right of way follow these rules:</h2>
+      <span class="title"><h2>Intersections</h4></span>
+    <h4>Look in all directions, obey road signs and traffic lights. <br> If road signs don't determine who has right of way follow these rules:</h4>
         <ul>
     <li>If you are turning give way to vehicles going straight</li>
     <li>When turning right give way to vehicles on your turning left</li>
@@ -529,8 +531,8 @@
     <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Keep Left Unless Passing</h2></span>
-    <h2>When a dual lane road is available use the left lane unless overtaking.</h2>
+      <span class="title"><h2>Keep Left Unless Passing</h4></span>
+    <h4>When a dual lane road is available use the left lane unless overtaking.</h4>
     <p>In passing bays, slow vehicle bays and passing lanes always use the left-most lane and allow others to pass.<br>Allow vehicles to pass you as soon as it is safe and practical to do so.</p>
     </div>
 </center>
@@ -541,23 +543,23 @@
         <center>
 <div class="card" style="width: 100%; margin:0 auto; text-align: left">
   <div class="content">
-      <span class="title"><h1>Important Information</h2></span>
-    <h2>Road Statusrs Licence:</h2>
-    <h4>You must have a current Licence and/or an international licence</h4>
-    <h4>The minimum age for hiring a rental car is generally 21</h4>
+      <span class="title"><h2>Important Information</h4></span>
+    <h4>Drivers Licence:</h4>
+    <h6>You must have a current Licence and/or an international licence</h6>
+    <h6>The minimum age for hiring a rental car is generally 21</h6>
     <br>
-    <h2>Impaired Driving:</h2>
-    <h4>Drugs and/or medication which can effect your driving is illegal</h4>
-    <h4>There is a zero alcohol limit for drivers under 20; <br>Road Statusrs over 20 are advised to consumer no more than two standard drinks before driving</h4>
+    <h4>Impaired Driving:</h4>
+    <h6>Drugs and/or medication which can effect your driving is illegal</h6>
+    <h6>There is a zero alcohol limit for drivers under 20; <br>Drivers over 20 are advised to consumer no more than two standard drinks before driving</h6>
     <br>
-    <h2>Seatbelts:</h2>
-    <h4>You must wear seatbelts, failing to do so can incur a $150 fine</h4>
+    <h4>Seatbelts:</h4>
+    <h6>You must wear seatbelts, failing to do so can incur a $150 fine</h6>
     <br>
-    <h2>Cellphones:</h2>
-    <h4>You must not use a mobile phone while driving unless it is completely hands free <br>or mounted to the vehicle and touched infrequently.</h4>
+    <h4>Cellphones:</h4>
+    <h6>You must not use a mobile phone while driving unless it is completely hands free <br>or mounted to the vehicle and touched infrequently.</h6>
     <br>
-    <h2>Crashes:</h2>
-    <h4>If you are involved in a crash you must stop and call the police (111) if someone is injured.<br>Obtain vehicle registration numbers and notify the insurance company and/or rental car company within 24 hours. <br>If no one is hurt give your name and address to the property owner or the police if the owner cant be located.</h4>
+    <h4>Crashes:</h4>
+    <h6>If you are involved in a crash you must stop and call the police (111) if someone is injured.<br>Obtain vehicle registration numbers and notify the insurance company and/or rental car company within 24 hours. <br>If no one is hurt give your name and address to the property owner or the police if the owner cant be located.</h6>
     </div>
 </center>
     </div>

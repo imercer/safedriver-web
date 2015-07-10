@@ -6,7 +6,7 @@
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/materialize.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="/css/jquery-ui.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <!-- Material Design Lite -->
@@ -33,14 +33,14 @@
                      -->
                 </div>
               </header>
-              <div class="mdl-layout__drawer" style="background-color: rgb(51,51,51); border: 0; height: 100%">
+              <div class="mdl-layout__drawer" style="background-color: rgb(51,51,51); border: 0; height: 100%; position: fixed">
                   <span class="mdl-layout-title"><a href="/index.php" style="color: #EEE">SafeDriver</a></span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="/learn/index.html" style="color: #EEE">Learn</a>
                     <a class="mdl-navigation__link" href="/test/index.html" style="color: #EEE">Quiz</a>
-                    <a class="mdl-navigation__link" href="/drive/status.php" style="color: #EEE">Road Status</a>
+                    <a class="mdl-navigation__link" href="/drive/status.php" style="color: #EEE"><div class="mdl-badge" data-badge="!">Road Status</div></a>
                     <a class="mdl-navigation__link" href="" style="color: #EEE">Help</a>
-                    <a class="mdl-navigation__link" href="" style="color: #EEE">About</a>
+                    <a class="mdl-navigation__link" href="/settings/" style="color: #EEE">Settings</a>
                 </nav>
               </div>
             </div>
@@ -66,8 +66,6 @@
             }
         ?>
            
-            <br>
-            <br>
             <br>
             <br>
             <center>
