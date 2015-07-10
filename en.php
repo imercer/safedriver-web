@@ -44,7 +44,7 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
                     <a class="mdl-navigation__link" href="/learn/index.html" style="color: #EEE">Learn</a>
                     <a class="mdl-navigation__link" href="/test/index.html" style="color: #EEE">Quiz</a>
                     <a class="mdl-navigation__link" href="/drive/status.php" style="color: #EEE"><div class="mdl-badge" data-badge="!">Road Status</div></a>
-                    <a class="mdl-navigation__link" href="" style="color: #EEE">Help</a>
+<!--                     <a class="mdl-navigation__link" href="" style="color: #EEE">Help</a> -->
                     <a class="mdl-navigation__link" href="/settings/" style="color: #EEE">Settings</a>
                 </nav>
               </div>
