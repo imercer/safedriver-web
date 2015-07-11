@@ -1,6 +1,6 @@
 <html>
     <head>
-<link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title>
+<link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Push Notifications</title>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/metro.min.js"></script>
@@ -12,7 +12,7 @@
         <div class="container">
         <nav class="navigation-bar dark">
             <nav class="navigation-bar-content">
-                <h1 style="color: white">Road Status Safe on New Zealand Roads</h1>
+                <h1 style="color: white">SafeDriver - Push Notifications</h1>
     </nav>
 </nav>
             <br>
