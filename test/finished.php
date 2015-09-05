@@ -3,7 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
-        <head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="/css/metro-bootstrap.css">
         <link rel="stylesheet" href="/css/style.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
@@ -69,7 +69,7 @@ session_start();
             echo "<br>";
         }
         if ($_SESSION['railcrossingq'] == "Wrong") {
-            echo "<h4>At a rail crossing you must STOP and Give way to ALL rail traffic</h4>";
+            echo "<h4>You must stop and give way to all railway traffic before proceeding across the level crossing. If the barrier arms are lowered or the alarms are sounding you must wait until they stop before proceeding across the crossing, even if you can't see a train.</h4>";
             echo "<br>";
         }
         if ($_SESSION['slowq'] == "Wrong") {

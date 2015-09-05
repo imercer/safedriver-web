@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="/css/metro-bootstrap.css">
         <link rel="stylesheet" href="/css/style.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
@@ -143,7 +143,7 @@ echo "<span class=\"title\"><h2 style=\"color:#4CAF50\">Correct</h2></span>";
                                             $_SESSION['correct']++;
 echo "<span class=\"title\"><h2 style=\"color:#4CAF50\">Correct</h2></span>";
                                             echo "
-                                            <h4>You must stop and give way to ALL railway traffic before proceeding across the level crossing</h4>
+                                            <h4>You must stop and give way to all railway traffic before proceeding across the level crossing. If the barrier arms are lowered or the alarms are sounding you must wait until they stop before proceeding across the crossing, even if you can't see a train.</h4>
                                             <br>
                                                             <div class=\"action\"><center><a href=\"quiz9.php\">
                                             Next Question
@@ -159,7 +159,7 @@ echo "<span class=\"title\"><h2 style=\"color:#4CAF50\">Correct</h2></span>";
                                             $_SESSION['railcrossingq'] = "Wrong";
                         echo "<span class=\"title\"><h2 style=\"color:#E53935\">Incorrect</h2></span>";
                                             echo "
-                                            <h4>You must STOP and give way to ALL railway traffic before proceeding across the level crossing</h4>
+                                            <h4>You must stop and give way to all railway traffic before proceeding across the level crossing. If the barrier arms are lowered or the alarms are sounding you must wait until they stop before proceeding across the crossing, even if you can't see a train.</h4>
                                             <br>
                                                             <div class=\"action\"><center><a href=\"quiz9.php\">
                                             Next Question
