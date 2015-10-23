@@ -14,6 +14,11 @@
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
         <!-- Material Design icon font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+                <style>
+            .twitter-timeline {
+                height: 6900px !important; 
+            }
+        </style>
     </head>
     <body>
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -72,4 +77,4 @@
             <a class="twitter-timeline" href="https://twitter.com/SafeDriverApp" data-widget-id="592239194820386817">Tweets by @SafeDriverApp</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </center>
-</body>
+    </body>
