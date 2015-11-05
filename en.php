@@ -19,6 +19,7 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
         <!-- Material Design icon font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="/nearby/gpslookup.js"></script>
     </head>
     <body>
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -42,9 +43,8 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
                   <span class="mdl-layout-title"><a href="/index.php" style="color: #EEE">SafeDriver</a></span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="/learn/index.html" style="color: #EEE">Learn</a>
-                    <a class="mdl-navigation__link" href="/test/index.html" style="color: #EEE">Quiz</a>
                     <a class="mdl-navigation__link" href="/drive/status.php" style="color: #EEE"><div class="mdl-badge" data-badge="!">Road Status</div></a>
-<!--                     <a class="mdl-navigation__link" href="" style="color: #EEE">Help</a> -->
+
                     <a class="mdl-navigation__link" href="/settings/" style="color: #EEE">Settings</a>
                 </nav>
               </div>
