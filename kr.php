@@ -1,8 +1,3 @@
-<?php
-$cookie_name = "lang";
-$cookie_value = "kr";
-setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000 = 1 day
-?>
 <!DOCTYPE html>
 <html>
         <head><script src="/js/analytics.js"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><script src="/js/analytics.js"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -13,6 +8,9 @@ setcookie($cookie_name, $cookie_value, time() + (2592000 * 30), "/"); // 2592000
         <link rel="stylesheet" href="/css/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script>
+            localStorage.setItem("lang", "kr");
+        </script>
     </head>
 <body class="metro">
         <div class="container">

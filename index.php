@@ -13,22 +13,16 @@
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
         <!-- Material Design icon font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-               
+        <script>
+            if (localStorage.lang) {
+                window.location = "/" + localStorage.lang + ".php";
+            } else {
+                window.location = "/welcome/languageselect.html";
+            }
+                 
+        </script>
     </head>
 <body>
-    <?php
-$cookie_name = "lang";
-if(isset($_COOKIE[$cookie_name])) {
-    $lang = $_COOKIE[$cookie_name];
-    echo "<script language = \"javascript\" type=\"text/javascript\">";
-    echo "window.location = \"/$lang.php\";";
-    echo "</script>";       
-} else {
-    echo "<script language = \"javascript\" type=\"text/javascript\">";
-    echo "window.location = \"/welcome/languageselect.html\";";
-    echo "</script>";    
-}
-?>
     <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate progress-demo" style="width: 100%"></div>
 
 <h1>Technical Malfunction</h1>
