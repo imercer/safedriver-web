@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head><script src="/js/analytics.js"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <head><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css"> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title> <link rel="icon" type="image/png" href="/images/icon.png"/>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
@@ -73,7 +73,7 @@
             <br>
             <br>
             <center>
-            <a class="twitter-timeline" href="https://twitter.com/SafeDriverApp" data-widget-id="592239194820386817">Tweets by @SafeDriverApp</a>
+            <a class="twitter-timeline" href="https://twitter.com/SafeDriverApp" data-widget-id="592239194820386817">Road Status Unavailable</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </center>
     </body>
