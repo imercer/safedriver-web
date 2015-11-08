@@ -8,7 +8,7 @@ session_start();
         <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">         <link rel="stylesheet" href="/css/card.css"><link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
-        <script src="/js/metro.min.js"></script>
+        <script src="/js/speed.js"></script>        <script src="/js/metro.min.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
