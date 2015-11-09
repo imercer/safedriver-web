@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="/js/analytics.js"></script>
+        <script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="/css/metro-bootstrap.css">
         <link rel="stylesheet" href="/css/style.css">
@@ -16,11 +16,79 @@
         <link rel="stylesheet" href="/css/jquery-ui.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         <!-- Material Design Lite -->
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
         <!-- Material Design icon font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>
+            .ui-dialog {
+                position: fixed;
+            }
+        </style>
+        <script>
+        var winW = $(window).width() - 25;
+        var winH = $(window).height() - 25;
+        $(function() {
+            $( "#northlanddialog" ).dialog({
+              autoOpen: false,
+              draggable: false,
+              resizable: false,
+              width: winW,
+              height: winH,
+              modal: true
+            });
+            $( "#aucklanddialog" ).dialog({
+                autoOpen: false,
+                draggable: false,
+                resizable: false,
+                width: winW,
+                height: winH,
+                modal: true
+            });
+            $( "#hamiltondialog" ).dialog({
+                autoOpen: false,
+                draggable: false,
+                resizable: false,
+                width: winW,
+                height: winH,
+                modal: true
+            });
+            $( "#cnidialog" ).dialog({
+                autoOpen: false,
+                draggable: false,
+                resizable: false,
+                width: winW,
+                height: winH,
+                modal: true
+            });
+            $( "#wellingtondialog" ).dialog({
+                autoOpen: false,
+                draggable: false,
+                resizable: false,
+                width: winW,
+                height: winH,
+                modal: true
+            });
+            $( "#westcoastdialog" ).dialog({
+              autoOpen: false,
+              draggable: false,
+              resizable: false,
+              width: winW,
+              height: winH,
+              modal: true
+            });
+            $( "#queenstowndialog" ).dialog({
+              autoOpen: false,
+              draggable: false,
+              resizable: false,
+              width: winW,
+              height: winH,
+              modal: true
+            });
+        });
+        </script>
     </head>
     <body>
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -448,10 +516,143 @@
             </div>
     </div>
 </div>
+<div id="northlanddialog" title="Northland">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image">
+                    <img src="/images/IMG_20150119_113441.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Northland</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Northland:</p>
+                        <ul>
+                            <li>Many Northland roads are winding and narrow</li>
+                            <li>Main Northland roads are often prone to wet conditions and may close</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Brush up on your One Way rules as many Northland bridges are one way</li>
+                            <li>Your rental car agreement may prohibit you from driving on Ninety-Mile Beach</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="aucklanddialog" title="Auckland">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="/images/auckland.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Auckland</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Auckland:</p>
+                        <ul>
+                            <li>Auckland's roads are generally well developed and travel through built-up areas</li>
+                            <li>Expect traffic and delays during peak periods</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Use motorways wherever possible</li>
+                        </ul>
+                   <p>If you're going to drive on the motorways this information will also come in handy:</p>
+                        <ul>
+                            <li>Auckland motorways have generally speed limit of 100km/h</li>
+                            <li>Some stretches of motorway have a lower speed limit in place, such as the Auckland Harbour Bridge (80km/h)</li>
+                            <li>Indicate before changing lanes</li>
+                            <li>Follow the directions of the signs</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="hamiltondialog" title="Hamilton">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="/images/Hamilton-City.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Hamilton</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Hamilton:</p>
+                        <ul>
+                            <li>Hamilton City's roads are generally well developed and travel through built-up areas</li>
+                            <li>Hamilton has many bridges to cross the Waikato River, which travells through the center of the city</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Many roads outside of Hamilton City are rural roads, often less maintained than the roads found in the built-up areas</li>
+                            <li>Watch for farm animals on rural roads</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="cnidialog" title="Central North Island">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="/images/Taupo.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to the Central North Island</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in the Central North Island:</p>
+                        <ul>
+                            <li>Many Central North Island roads are winding and narrow</li>
+                            <li>Central Plateau roads may close due to snow</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Ensure you secure your car when parking at tourist attractions</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="wellingtondialog" title="Wellington">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="/images/Wellington_City_at_dusk.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Wellington</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Wellington:</p>
+                        <ul>
+                            <li>Most Wellington City roads are highly developed</li>
+                            <li>Plan your journey before driving</li>
+                            <li>The speed limit in built-up areas is generally 50km/h</li>
+                            <li>Your rental car agreement may prohibit you from travelling on the Interislander</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="westcoastdialog" title="West Coast">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="/images/Punakaiki_-_looking_south.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to the West Coast</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in the West Coast:</p>
+                        <ul>
+                            <li>Most West Coast roads are winding, narrow and have steep terrain</li>
+                            <li>Many roads, especially the alpine passes, may be subject to winter driving conditions</li>
+                            <li>Pull over to the side of the road when photographing the scenery</li>
+                            <li>Plan your journey before driving</li>
+                        </ul>
+               </div>
+                </div>
+</div>
+<div id="queenstowndialog" title="Queenstown">
+                  <div class="card" style="width: 100%; max-width: 100%;">
+                <div class="image" style="text-align: center">
+                    <img src="/images/queenstown.jpg" style="width: 100%; max-width: 512px"></img>
+                    <span class="title" style="text-overflow: ellipsis; text-align: left;">Welcome to Queenstown</span>
+                 </div>
+               <div class="content">
+                   <p>Keep the following details in mind when driving in Queenstown:</p>
+                        <ul>
+                            <li>Roads in this area are often narrow, winding and steep</li>
+                            <li>During winter months the roads are often subject to icy road conditions</li>
+                            <li>Avoid driving on mountain passes, if possible, during the winter months</li>
+                            <li>Pull over to the side of the road when photographing the scenery</li>
+                        </ul>
+               </div>
+                </div>
+</div>
     </body>
 <script>
 $(document).ready(function() {
     $(window.location.hash).show();
 });
 </script>
+        <script src="/drive/welcome.js"></script>
 </html>
