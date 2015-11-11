@@ -52,7 +52,7 @@
             <br>
             <div class="demo-grid-1 mdl-grid">
                 <div class="mdl-cell mdl-cell--4-col">
-                    <a href="learn/index.html">
+                    <a href="/cn/learn/index.html">
                         <div class="mdl-card mdl-shadow--2dp card-square">
                           <div class="mdl-card__title mdl-card--expand" style="background: bottom right 15% no-repeat rgb(0,175,240)">
                             <h2 class="mdl-card__title-text" style="color: #111; font-weight: bold">得知</h2>
@@ -64,7 +64,7 @@
                     </a>
                 </div>
                 <div class="mdl-cell mdl-cell--4-col">
-                    <a href="drive/status.php">
+                    <a href="/cn/drive/status.php">
                           <div class="mdl-card mdl-shadow--2dp card-square" style="background-colour: blue">
                             <div class="mdl-card__title mdl-card--expand" style="background: bottom right 15% no-repeat rgb(120,170,28)">
                                 <h2 class="mdl-card__title-text" style="color: #111; font-weight: bold">道路现状</h2>
@@ -76,7 +76,7 @@
                     </a>
                 </div>
                 <div class="mdl-cell mdl-cell--4-col">
-                    <a href="settings/index.html">
+                    <a href="/cn/settings/index.html">
                           <div class="mdl-card mdl-shadow--2dp card-square" style="background-colour: blue">
                             <div class="mdl-card__title mdl-card--expand" style="background: bottom right 15% no-repeat rgb(194,144,8)">
                                 <h2 class="mdl-card__title-text" style="color: #111; font-weight: bold">设置</h2>
