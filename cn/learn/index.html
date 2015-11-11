@@ -1,503 +1,249 @@
 <!DOCTYPE html>
 <html>
         <head><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title> <link rel="icon" type="image/png" href="/images/icon.png"/>
-        <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">         <link rel="stylesheet" href="/css/card.css"><link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/metro-bootstrap.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+       <title>安全驾驶 - 驱动器的安全对新西兰的道路</title> <link rel="icon" type="image/png" href="/images/icon.png"/>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
-        <script src="/js/metro.min.js"></script>
+        <script src="/js/materialize.js"></script>
         <link rel="stylesheet" href="/css/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script>
-$(function() {
-    $( "#left" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#lefter" ).click(function() {
-      $( "#left" ).dialog( "open" );
-    });
-    
-    $( "#overtake" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#overtaker" ).click(function() {
-      $( "#overtake" ).dialog( "open" );
-    });
-    
-    $( "#speed" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#speeder" ).click(function() {
-      $( "#speed" ).dialog( "open" );
-    });
-    
-      $( "#motorways" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#motorwaysopen" ).click(function() {
-      $( "#motorways" ).dialog( "open" );
-    });
-    
-    $( "#railwaycrossing" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#railway" ).click(function() {
-      $( "#railwaycrossing" ).dialog( "open" );
-    });
-    
-      $( "#trafficlight" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#traffic" ).click(function() {
-      $( "#trafficlight" ).dialog( "open" );
-    });
-    
-          $( "#onebridge" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#oneway" ).click(function() {
-      $( "#onebridge" ).dialog( "open" );
-    });
-    
-            $( "#roundabout" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#roundabouts" ).click(function() {
-      $( "#roundabout" ).dialog( "open" );
-    });  
-                $( "#parkiner" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#parking" ).click(function() {
-      $( "#parkiner" ).dialog( "open" );
-    });  
-    
-                    $( "#pedcrossing" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#crossings" ).click(function() {
-      $( "#pedcrossing" ).dialog( "open" );
-    });  
-    
-                        $( "#inter" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#intersection" ).click(function() {
-      $( "#inter" ).dialog( "open" );
-    });  
-   $( "#passer" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#passing" ).click(function() {
-      $( "#passer" ).dialog( "open" );
-    });  
-   $( "#information" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#info" ).click(function() {
-      $( "#information" ).dialog( "open" );
-    });  
-       $( "#videoplayer" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#video" ).click(function() {
-      $( "#videoplayer" ).dialog( "open" );
-    });  
-               $( "#slipperydialog" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#slippery" ).click(function() {
-      $( "#slipperydialog" ).dialog( "open" );
-    });
-      $( "#turns" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#turnsopener" ).click(function() {
-      $( "#turns" ).dialog( "open" );
-    }); 
-    
-    
-    $( "#gravel" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#gravelroads" ).click(function() {
-      $( "#gravel" ).dialog( "open" );
-    }); 
-    
-     $( "#animalsroad" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#animals" ).click(function() {
-      $( "#animalsroad" ).dialog( "open" );
-    }); 
-    
-    $( "#icyroads" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#ice" ).click(function() {
-      $( "#icyroads" ).dialog( "open" );
-    }); 
-  });  
-</script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/css/card.css"/>
+        <!-- Material Design Lite -->
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
+        <!-- Material Design icon font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="dialoglauncher.js"></script>
     </head>
     <body class="metro">
         <div class="container">
-        <nav class="navigation-bar dark">
-            <nav class="navigation-bar-content">
-                <a href="/cn.php" style="color: #FFF"><item class="element">家</item></a>
-        <item class="element-divider"></item>
-                <a href="../learn/index.html" style="color: #FFF"><item class="element">學習</item></a>
-        <item class="element-divider"></item>
-                <a href="../test/index.html" style="color: #FFF"><item class="element">測試</item></a>     
-        <item class="element-divider"></item>
-                <a href="../drive/status.php" style="color: #FFF"><item class="element">驅動器</item></a>  
-    </nav>
-</nav>
-        <h1>學習</h1>
-        <button id="lefter" style="color: #FFF; background-color: #FFF">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+              <header class="mdl-layout__header" style="background-color: rgb(51,51,51); position: fixed">
+                <div class="mdl-layout__header-row">
+                  <!-- Title -->
+                  <span class="mdl-layout-title">得知</span>
+                  <!-- Add spacer, to align navigation to the right -->
+                  <div class="mdl-layout-spacer"></div>
+                  <!-- Navigation. We hide it in small screens.
+                  <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                  </nav>
+                     -->
+                </div>
+              </header>
+              <div class="mdl-layout__drawer" style="background-color: rgb(51,51,51); border: 0; height: 100%; position: fixed">
+                  <span class="mdl-layout-title"><a href="/index.php" style="color: #EEE">安全驾驶</a></span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="/cn/learn/index.html" style="color: #EEE">得知</a>
+
+                    <a class="mdl-navigation__link" href="/cn/drive/status.php" style="color: #EEE"><div class="mdl-badge" data-badge="!">道路现状</div></a>
+
+                    <a class="mdl-navigation__link" href="/cn/settings/" style="color: #EEE">设置</a>
+                </nav>
+              </div>
+            </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="padding-left: 10px">
+        <a href="keepleft.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/keep-left.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">留在新西蘭的道路的左手邊</span>
+            <span class="label fg-white" style="text-align: left">留在左侧新西兰道路</span>
         </div>
         </div>
         </div>
-        </button>
-        <button id="speeder" style="color: #FFF; background-color: #FFF">
-        <div class="tile live" data-role="live-tile" data-effect="slideUp">
-        <div class="tile-content"><img src="/images/50kmph.gif"></div>
-        <div class="tile-content"><img src="/images/100kmph.gif"></div>
-        <div class="tile-content"><img src="/images/openroad.gif"></div>
+        </a>
+        <a href="speedlimits.html">
+        <div class="tile" data-role="live-tile" data-effect="slideUp">
+        <div class="tile-content image"><img src="/images/50kmph.gif"></div>
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">速度限制適用於新西蘭的道路</span>
+            <span class="label fg-white" style="text-align: left">车速限制适用于新西兰的道路</span>
         </div>
         </div>
-        </button>
-        <button id="turnsopener" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="conditions.html">
             <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/windy.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">新西蘭的道路會很危險</span>
+            <span class="label fg-white" style="text-align: left">新西兰的道路可能是危险的</span>
         </div>
         </div>
         </div>
-        </button>
-        <button id="gravelroads" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="unsealed.html">
             <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/gravel.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">流速減緩未密封道路</span>
+            <span class="label fg-white" style="text-align: left">放慢启封道路</span>
         </div>
         </div>
         </div>
-        </button>
-        <button id="overtaker" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="overtaking.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/overtaking.png">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">不通過黃線附近或靠近角落或十字路口</span>
+            <span class="label fg-white" style="text-align: left">不要在黄线，角或周围交叉口超越</span>
         </div>
         </div>
         </div>
-        </button>
-        <button id="motorwaysopen" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="motorways.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/motorways.jpg">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">新西蘭高速公路的限速是100kmph</span>
+            <span class="label fg-white" style="text-align: left">新西兰高速公路限速是100kmph</span>
         </div>
         </div>
         </div>
-        </button>
-       <button id="railway" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="railwaycrossings.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/railway-cross-sign.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">新西蘭擁有大量的火車口岸</span>
+            <span class="label fg-white" style="text-align: left">新西兰有大量平交路口</span>
         </div>
         </div>
         </div>
-        </button>
-       <button id="slippery" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="slipperyroads.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/slippery.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">減緩在濕滑路面</span>
+            <span class="label fg-white" style="text-align: left">保持警觉，在湿滑路面</span>
         </div>
         </div>
         </div>
-        </button>
-       <button id="ice" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="icyroads.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img style="padding-top: 10px" src="/images/ice.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">謹慎駕駛冰雪路面上</span>
+            <span class="label fg-white" style="text-align: left">冬季驾驶条件会很危险</span>
         </div>
         </div>
         </div>
-        </button>  
-    <button id="animals" style="color: #FFF; background-color: #FFF">
+        </a>        
+        <a href="animals.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/animals.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">注意在道路上的動物</span>
+            <span class="label fg-white" style="text-align: left">留意道路上的动物</span>
         </div>
         </div>
         </div>
-        </button>
-         <button id="traffic" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="trafficlights.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/trafficlight.png">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">紅色表示停止，黃色表示停止如果可以的話，和綠色的手段去是否安全</span>
+            <span class="label fg-white" style="text-align: left">红色表示停止，黄色表示停止，如果你能和绿色的手段去，如果它是安全的</span>
         </div>
         </div>
         </div>
-        </button>
-  <button id="oneway" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="onelane.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/oneway.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">新西蘭有很多一個車道橋樑</span>
+            <span class="label fg-white" style="text-align: left">新西兰有许多单向桥</span>
         </div>
         </div>
         </div>
-        </button>
-      <button style="color: #FFF; background-color: #FFF">
+        </a>
+      <a>
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/stop.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">你必須停止並讓路給所有流量</span>
+            <span class="label fg-white" style="text-align: left">你必须停下来让路给所有流量</span>
         </div>
         </div>
         </div>
-        </button>
-      <button style="color: #FFF; background-color: #FFF">
+        </a>
+      <a>
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/giveway.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">請準備停下來讓路</span>
+            <span class="label fg-white" style="text-align: left">准备停下来让路</span>
         </div>
         </div>
         </div>
-        </button>
-    <button id="roundabouts" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="roundabouts.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/roundabout-sign.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">讓路給所有流量在你的右邊</span>
+            <span class="label fg-white" style="text-align: left">让路给所有流量在您的权利</span>
         </div>
         </div>
         </div>
-        </button>
-    <button id="parking" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="parking.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/parking.png">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">停車限制應用</span>
+            <span class="label fg-white" style="text-align: left">停车限制</span>
         </div>
         </div>
         </div>
-        </button>
-    <button id="crossings" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="pedcrossing.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/pedestrian.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">讓路給行人</span>
+            <span class="label fg-white" style="text-align: left">礼让行人</span>
         </div>
         </div>
         </div>
-        </button>     
-    <button id="intersection" style="color: #FFF; background-color: #FFF">
+        </a>     
+        <a href="intersections.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/intersection.jpg">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">看看各個方向路口處</span>
+            <span class="label fg-white" style="text-align: left">看在交叉口各个方向</span>
         </div>
         </div>
         </div>
-        </button> 
-    <button id="passing" style="color: #FFF; background-color: #FFF">
+        </a> 
+        <a href="passing.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/passing.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">拉向左側，以允許車輛通行</span>
+            <span class="label fg-white" style="text-align: left">拉向左侧，以允许车辆通行</span>
         </div>
         </div>
         </div>
-        </button> 
-    <button id="info" style="color: #FFF; background-color: #FFF">
+        </a> 
+        <a href="information.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/info.png">
@@ -506,179 +252,19 @@ $(function() {
         </div>
         </div>
         </div>
-        </button> 
-        <!--
-        <button id="video" style="color: #FFF; background-color: #FFF">
-        <div class="tile bg-amber">
+        </a> 
+        <a href="video.html">
+        <div class="tile">
             <div class="tile-content image">
             <img src="/images/player.png">
             </div>
             <div class="brand bg-black">
-                <span class="label fg-white" style="text-align: left">觀看視頻</span>
+                <span class="label fg-white" style="text-align: left">看视频</span>
             </div>
         </div>
-        </button>
-        -->
+        </a>
+        </div>
+        </div>
         </div>
     </body>
-<div id="left" title="靠左">
-  <h2>在新西蘭，所有的流量是旅行在路的左側.</h2>
-    <center><img src="/images/laned-curve.jpg"/> <img src="/images/laned-road.jpg"/></center>
-</div>
-<div id="overtake" title="路過">
-  <h2>你可以通過汽車上的右手邊，如果你能在任何時候看到百米
-    <br><br><b>你永遠無法通過：</b></br>
-    <ul>
-    <li><h3>如果在路中間的線是黃色</h3></li>
-    <li><h3>附近的人行橫道，鐵路道口或十字路口</h3></li>
-        <li><h3>在山頂上，在一個角落裡或您無法看到在你的面前100米，這是不安全的</h3></li>
-        </ul>
-    </h2>
-</div>
-<div id="speed" title="速度限制適用於新西蘭道路">
-  <h2>你必須有足夠的空間在你的車前面突然停車</h2>
-    <br>
-  <h2>新西蘭限速每小時公里未英里</h2>
-    <br>
-  <h2>建成區一般為50公里/小時的速度極限然而下限可申請</h2>
-    <br>
-  <h2>開放的道路限制如下</h2>
-    <ul>
-    <li>汽車，摩托車和麵包車：每小時100公里</li>
-    <li>重型車輛：每小時90公里</li>
-    <li>車輛牽引大篷車和/或拖車：每小時90公里</li>
-    </ul>
-    <center><img src="/images/openroad.gif" height="128px" width="128px"/> <img src="/images/50kmph.gif" height="128px" width="128px"/></center>
-</div>
-<div id="turns" title="新西蘭的道路狀況">
-  <h2>新西蘭的道路比中國的不同</h2>
-    <br>
-  <h3>他們一般都是丘陵，狹窄，有許多曲折.</h3>
-    <br>
-  <p>我們的道路主要是密封良好，但有時也可以是粗糙和不密封。</p>
-    <p>給自己充足的時間到達您的目的地，並假設它會需要更長的時間比預期的。</p>
-    </div>
-<div id="gravel" title="碎石和道路未密封">
-  <h2>避免啟封道路盡可能.</h2>
-    <br>
-  <h3>如果必須開車上他們，記住他們一般較窄。 </h3>
-    <i>開車慢慢逼近迎面而來的車輛時慢，甚至進一步灰塵可以掩蓋你的視野和石頭能拿出和芯片甚至是破解你的擋風玻璃。</i>
-    <br>
-    </div>
-<div id="motorways" title="高速公路旁">
-  <h2>留在左邊，你必須改變車道前的信號至少三秒鐘</h2>
-    <br>
-  <h2>新西蘭高速公路旁的最高限速是百公里每小時除非另有規定</h2>
-    <br>
-  <h2>在高速公路上你不能</h2>
-    <ul>
-    <li>步行或騎自行車</li>
-    <li>停止</li>
-    <li>掉頭</li>
-    </ul>
-    </div>
-<div id="railwaycrossing" title="鐵路道口">
-  <h2>總是讓位給所有的軌道交通 <br> </h2>
-    <p>一些過路處均設有警鈴，警號和障礙 <br>當這些設備的操作您必須停止 <br>體徵被用在其他過路處，除非你確信沒有軌道交通，從任何一個方向，你不能繼續。</p>
-    </div>
-</div>
-<div id="slipperydialog" title="濕滑路面">
-  <h2>放慢腳步，小心駕駛在濕滑路面. <br> </h2>
-    <p>新西蘭的道路是非常無情的，他們是潛在的危險時，他們都濕了。 <br>放慢腳步，小心駕駛，以防止你失去控制。</p>
-    </div>
-<div id="icyroads" title="開車到在結冰的路面條件">
-  <h2>冰雪可以使道路非常危險的，尤其是在山路</h2>
-    <center>
-    <p>汽車租賃公司將提供鏈，如果你很可能在這種情況下開車。 <br>慢下來，保證你遵循路標，警察和/或修路工人的指示。</p>
-        </center>
-    </div>
-</div>
-<div id="animalsroad" title="上道動物">
-  <h2>如果你遇到的農場動物在道路上，放慢腳步，不健全的號角</h2>
-    <p>您可能需要停下來讓他們走過去，慢慢接近他們身後，並按照農民的指示。</p>
-    </div>
-</div>
-<div id="trafficlight" title="紅綠燈">
-  <h2>在紅綠燈以下應用於:</h2>
-    <ul>
-    <li><B>紅色</ B>表示停止</li>
-    <li><B>黃</ B>表示停止，如果你能</li>
-    <li><B>綠色</ b>的意思去，如果它是安全的</li>
-        <br>
-    <li>紅箭表示停止不轉</li>
-    <li>黃表示停止在確保安全的做，所以</li>
-    <li>綠色的方式反過來又</li>
-    </ul>
-    <i>轉向之前，必須發出信號至少3秒</i>
-    </div>
-<div id="onebridge" title="一個車道橋樑">
-  <h2>當你來到一個單向橋。等待它是安全的，然後交叉.</h2>
-    <p>圓形標誌的紅色箭頭意味著你必須讓位給所有迎面而來的車輛。
-    <br>
-    <br>
-    長方形的標誌，在你的方向的大箭頭意味著你有優先通行權<br> 如果有一輛車在橋上，你必須停止.</p>
-    <center><img src="/images/singlenane.jpg"/></center>
-    </div>
-<div id="roundabout" title="化環形交叉口">
-    <center><h2>讓位給所有的流量到您的權利</h2>
-    <h2>進入環島進入<b>離開</ B></h2></center>
-  <p>信號在一個迴旋處，如果你打算把當你一前通過出口，你打算拿。</p>
-    <p>
-    </div>
-<div id="parkiner" title="停車限制">
-    <h2>不要停在一個破黃線
-        <br>
-        不要停放在靠近路口或人行橫道
-        <br>
-        不要停放面臨著迎面而來的車輛</h2>
-    <br>
-    <img src="/images/clearway.gif" width="100px"/> 當這些跡象都存在不停車<br><br>
-    <img src="/images/clearwaydate.gif" width="100px"/> 在標註的時候不要停止.<br><br>
-    <img src="/images/parkingtime.gif" width="100px" align="left"/>&nbsp; 您可停放長達60分鐘的位置由符號表示。 <br>&nbsp; 標誌上的號碼是多少時間，你被允許停車.<br><br>
-    <p>
-    </div>
-<div id="pedcrossing" title="行人過路">
-    <center><h2>讓路給行人在斑馬線上兩側</h2>
-    <p>慢下來接近時，並準備停止</p>
-  <p>不傳遞靠近過路.</p>
-</center>
-</div>
-<div id="inter" title="十字路口">
-    <h2>看看各個方向，服從路標和紅綠燈。 <br> 如果路牌沒有確定誰擁有路權遵循以下規則：</h2>
-        <ul>
-    <li>如果你都轉向讓路給直行車輛</li>
-    <li>當你打算右側讓路給汽車在您的左邊</li>
-    <li>在T型交叉口和車道輔路必須讓交通上的直路</li>
-    <li>否則，讓路給車輛從右邊駛來。</li>
-    </ul>
-</div>
-<div id="passer" title="保持左行除非路過">
-    <h2>當雙車道公路可利用左側車道超車，除非.</h2>
-    <p>在避車，車輛緩慢海灣和傳球路線始終使用最左邊的車道，並允許他人通過。<br>讓車輛盡快通過你，因為它是安全和實用的。</p>
-</div>
-<div id="information" title="重要信息">
-    <h2>駕駛執照：</h2>
-    <h4>你必須有一個當前的許可證和/或國際駕照</h4>
-    <h4>的最低年齡租用汽車一般為21</h4>
-    <br>
-    <h2>酒後駕駛：</h2>
-    <h4>藥物和/或藥物可以影響你的駕駛是違法的</h4>
-    <h4>有一個零酒精含量為20歲以下的司機; <br>司機20不應該消耗超過兩個標準杯</h4>
-    <br>
-    <h2>安全帶:</h2>
-    <h4>您必須系好安全帶，不這樣做可以產生150美元的罰款</h4>
-    <br>
-    <h2>手機:</h2>
-    <h4>不得使用手機，而駕駛，除非它是完全免費的手 <br>或者安裝在車輛和感動很少。</h4>
-    <br>
-    <h2>事故:</h2>
-    <h4>如果您參與了碰撞，你必須停止並報警（111），如果有人受傷。<br>獲得車輛登記號碼並在24小時內通知保險公司和/或汽車租賃公司。 <br>如果沒有人受傷給您的姓名和地址，業主或警察，如果車主不能定位。</h4>
-</div>
-<div id="videoplayer" title="視頻">
-    <video width="720px" controls>
-  <source src="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4" type="video/mp4">
-  <source src="http://mirrorblender.top-ix.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg" type="video/ogg">
-  Your browser does not support HTML5 video.
-</video>
-</div>
 </html>

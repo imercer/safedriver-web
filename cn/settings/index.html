@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <head><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css"> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>安全驾驶 - 驱动器的安全对新西兰的道路</title> <link rel="icon" type="image/png" href="/images/icon.png"/>
+        <head><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css"> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title> <link rel="icon" type="image/png" href="/images/icon.png"/>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
         <script src="/js/materialize.js"></script>
@@ -14,18 +14,13 @@
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
         <!-- Material Design icon font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-                <style>
-            .twitter-timeline {
-                height: 6900px !important; 
-            }
-        </style>
     </head>
     <body>
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
               <header class="mdl-layout__header" style="background-color: rgb(51,51,51); position: fixed">
                 <div class="mdl-layout__header-row">
                   <!-- Title -->
-                  <span class="mdl-layout-title">道路现状</span>
+                  <span class="mdl-layout-title">安全驾驶</span>
                   <!-- Add spacer, to align navigation to the right -->
                   <div class="mdl-layout-spacer"></div>
                   <!-- Navigation. We hide it in small screens.
@@ -42,37 +37,28 @@
                   <span class="mdl-layout-title"><a href="/index.php" style="color: #EEE">安全驾驶</a></span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="/cn/learn/index.html" style="color: #EEE">得知</a>
+
                     <a class="mdl-navigation__link" href="/cn/drive/status.php" style="color: #EEE"><div class="mdl-badge" data-badge="!">道路现状</div></a>
+
                     <a class="mdl-navigation__link" href="/cn/settings/" style="color: #EEE">设置</a>
                 </nav>
               </div>
             </div>
-        <br>
-        <br>
-        <?php
-            $msgfile = '/var/www/drivesafe/push/androidmsg';
-            if (file_exists($msgfile)) {
-                $pendingalert = file_get_contents($msgfile);
-                if (isset($pendingalert)) {
-                    echo "
-                    <div style=\"background-color: rgba(255,58,0,0.85); width: 100%; height: auto; max-height:40%; color: #EEE\">
-                    <br>
-                    <center>
-                    <h6>$pendingalert</h6></center>
-                    <br>
-                    </div>"; }
-                else { 
-                    echo "";
-                }
-            } else {
-                echo "";
-            }
-        ?>
-           
-            <br>
-            <br>
-            <center>
-            <a class="twitter-timeline" href="https://twitter.com/SafeDriverApp" data-widget-id="592239194820386817">Road Status Unavailable</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </center>
-    </body>
+<center>
+<div style="width: 90%; height: 100%; padding-left: 5px; padding-top: 75px; padding-right: 5px; text-align: center">
+<table class="mdl-data-table mdl-js-data-table mdl-data-table- mdl-shadow--2dp" style="width: 100%; height: 100%;">
+  <tbody>
+      <tr onclick="window.document.location='notifications.html';">
+        <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">notifications</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更改通知设置</td>
+        </tr> </a>
+    <tr onclick="window.document.location='/welcome/languageselect.html';">
+      <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">language</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;改变你的语言</td>
+    </tr>
+    <tr onclick="window.document.location='mailto:isaac@isaacscomputertips.com?subject=SafeDriver%20app%20feedback&body=Insert%20your%20message%20here.%20If%20you\'re%20reporting%20an%20issue%20please%20state%20the%20issue%20clearly\,%20include%20your%20device%20type%20and%20how%20you%20replicate%20the%20issue.';">
+      <td class="mdl-data-table__cell--non-numeric"><i class="material-icons">feedback</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发送反馈</td>
+    </tr>
+  </tbody>
+</table>
+    <br>
+<i>Created in Auckland, New Zealand</i>
+</div>
