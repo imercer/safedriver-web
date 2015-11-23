@@ -22,36 +22,29 @@
  * UPDATE 2015/04/30
  * SELECT logic adjusted (result stored in temp. file removed) by Taifun
  */
-
 /************************************CONFIG****************************************/
 //DATABSE DETAILS//
 $DB_ADDRESS="localhost";
 $DB_USER="Isaac Mercer";
 $DB_PASS="is@@c801";
 $DB_NAME="safedriver";
-
 //SETTINGS//
 //This code is something you set in the APP so random people cant use it.
 $SQLKEY="DIRTREE";
-
+$querycmd = "SELECT files FROM `endirlist`";
 /************************************CONFIG****************************************/
-
-//these are just in case setting headers forcing it to always expire 
+//these are just in case setting headers forcing it to always expire
 header('Cache-Control: no-cache, must-revalidate');
-
 error_log(print_r($_POST,TRUE));
-
-if( isset($_POST['query']) && isset($_POST['key']) ){                                   //checks if the tag post is there and if its been a proper form post
+if(isset($_POST['key']) ){                                   //checks if the tag post is there and if its been a proper form post
   //set content type to CSV (to be set here to be able to access this page also with a browser)
   header('Content-type: text/csv');
-
   if($_POST['key']==$SQLKEY){                                                           //validates the SQL key
-    $query=urldecode($_POST['query']);
+    $query=urldecode($querycmd);
     if(get_magic_quotes_gpc()){     //check if the worthless pile of crap magic quotes is enabled and if it is, strip the slashes from the query
       $query=stripslashes($query);
     }
     $conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);    //connect
-
     if($conn->connect_error){                                                           //checks connection
       header("HTTP/1.0 400 Bad Request");
       echo "ERROR Database Connection Failed: " . $conn->connect_error, E_USER_ERROR;   //reports a DB connection failure
@@ -80,20 +73,19 @@ if( isset($_POST['query']) && isset($_POST['key']) ){                           
     }
   } else {
      header("HTTP/1.0 400 Bad Request");
-     echo "Bad Request";                                       //reports if the secret key was bad
+     echo "Bad Request";
+     echo "Bad Secret Key";                    //reports if the secret key was bad
   }
-} elseif ( isset($_GET['query']) && isset($_GET['key']) ){
+} elseif ( isset($_GET['key']) ){
             //checks if the tag post is there and if its been a proper form post
   //set content type to CSV (to be set here to be able to access this page also with a browser)
   header('Content-type: text/csv');
-
   if($_GET['key']==$SQLKEY){                                                           //validates the SQL key
-    $query=urldecode($_GET['query']);
+    $query=urldecode($querycmd);
     if(get_magic_quotes_gpc()){     //check if the worthless pile of crap magic quotes is enabled and if it is, strip the slashes from the query
       $query=stripslashes($query);
     }
     $conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);    //connect
-
     if($conn->connect_error){                                                           //checks connection
       header("HTTP/1.0 400 Bad Request");
       echo "ERROR Database Connection Failed: " . $conn->connect_error, E_USER_ERROR;   //reports a DB connection failure
@@ -123,9 +115,11 @@ if( isset($_POST['query']) && isset($_POST['key']) ){                           
   } else {
      header("HTTP/1.0 400 Bad Request");
      echo "Bad Request";                                       //reports if the secret key was bad
+        echo "Bad Secret Key";
   }
 } else {
         header("HTTP/1.0 400 Bad Request");
         echo "Bad Request";
+        echo "a random error occured here";
 }
 ?>
