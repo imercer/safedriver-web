@@ -34,6 +34,8 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 function doStuff(mylat, mylong) {
     if (localStorage.welcome) {
         welcome = localStorage.welcome;
+    } else {
+        welcome = "blank";
     }
     if (distance(mylat, mylong, "-35.269039", "173.583971", "K") < 130) {
       //Northland

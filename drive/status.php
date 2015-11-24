@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <head><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css"> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title> <link rel="icon" type="image/png" href="/images/icon.png"/>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
@@ -39,7 +39,7 @@
                 </div>
               </header>
               <div class="mdl-layout__drawer" style="background-color: rgb(51,51,51); border: 0; height: 100%; position: fixed">
-                  <span class="mdl-layout-title"><a href="/index.php" style="color: #EEE">SafeDriver</a></span>
+                  <span class="mdl-layout-title"><a href="/en.html" style="color: #EEE">SafeDriver</a></span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="/learn/index.html" style="color: #EEE">Learn</a>
                     <a class="mdl-navigation__link" href="/drive/status.php" style="color: #EEE"><div class="mdl-badge" data-badge="!">Road Status</div></a>

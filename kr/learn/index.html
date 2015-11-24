@@ -1,430 +1,191 @@
 <!DOCTYPE html>
 <html>
-        <head><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<link rel="stylesheet" href="/css/metro-bootstrap.css"><link rel="stylesheet" href="/css/style.css">         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>SafeDriver - Drive Safe on New Zealand Roads</title> <link rel="icon" type="image/png" href="/images/icon.png"/>
-        <link rel="stylesheet" href="/css/metro-bootstrap-responsive.css">         <link rel="stylesheet" href="/css/card.css"><link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <head><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><script src="/js/analytics.js"></script>        <script src="/drive/speed.js"></script><meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="/css/metro-bootstrap.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+       <title>안전 운전</title> <link rel="icon" type="image/png" href="/images/icon.png"/>
         <script src="/js/jquery/jquery.min.js"></script>
         <script src="/js/jquery/jquery.widget.min.js"></script>
-        <script src="/js/metro.min.js"></script>
+        <script src="/js/materialize.js"></script>
         <link rel="stylesheet" href="/css/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script>
-$(function() {
-    $( "#left" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#lefter" ).click(function() {
-      $( "#left" ).dialog( "open" );
-    });
-    
-    $( "#overtake" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#overtaker" ).click(function() {
-      $( "#overtake" ).dialog( "open" );
-    });
-    
-    $( "#speed" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#speeder" ).click(function() {
-      $( "#speed" ).dialog( "open" );
-    });
-    
-      $( "#motorways" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#motorwaysopen" ).click(function() {
-      $( "#motorways" ).dialog( "open" );
-    });
-    
-    $( "#railwaycrossing" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#railway" ).click(function() {
-      $( "#railwaycrossing" ).dialog( "open" );
-    });
-    
-      $( "#trafficlight" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#traffic" ).click(function() {
-      $( "#trafficlight" ).dialog( "open" );
-    });
-    
-          $( "#onebridge" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#oneway" ).click(function() {
-      $( "#onebridge" ).dialog( "open" );
-    });
-    
-            $( "#roundabout" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#roundabouts" ).click(function() {
-      $( "#roundabout" ).dialog( "open" );
-    });  
-                $( "#parkiner" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#parking" ).click(function() {
-      $( "#parkiner" ).dialog( "open" );
-    });  
-    
-                    $( "#pedcrossing" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#crossings" ).click(function() {
-      $( "#pedcrossing" ).dialog( "open" );
-    });  
-    
-                        $( "#inter" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#intersection" ).click(function() {
-      $( "#inter" ).dialog( "open" );
-    });  
-   $( "#passer" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#passing" ).click(function() {
-      $( "#passer" ).dialog( "open" );
-    });  
-   $( "#information" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#info" ).click(function() {
-      $( "#information" ).dialog( "open" );
-    });  
-       $( "#videoplayer" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#video" ).click(function() {
-      $( "#videoplayer" ).dialog( "open" );
-    });  
-           $( "#slipperydialog" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#slippery" ).click(function() {
-      $( "#slipperydialog" ).dialog( "open" );
-    });
-      $( "#turns" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#turnsopener" ).click(function() {
-      $( "#turns" ).dialog( "open" );
-    }); 
-    
-    $( "#gravel" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#gravelroads" ).click(function() {
-      $( "#gravel" ).dialog( "open" );
-    }); 
-    
-     $( "#animalsroad" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#animals" ).click(function() {
-      $( "#animalsroad" ).dialog( "open" );
-    }); 
-    
-    $( "#icyroads" ).dialog({
-      autoOpen: false,
-      width: 'auto', // overcomes width:'auto' and maxWidth bug
-      height: 'auto',
-      maxWidth: 600,
-      maxHeight: 600,
-      modal: true,
-      fluid: true, //new option
-      resizable: false,
-    });
- 
-    $( "#ice" ).click(function() {
-      $( "#icyroads" ).dialog( "open" );
-    }); 
-  });  
-</script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/css/card.css"/>
+        <!-- Material Design Lite -->
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
+        <!-- Material Design icon font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="dialoglauncher.js"></script>
     </head>
     <body class="metro">
         <div class="container">
-        <nav class="navigation-bar dark">
-            <nav class="navigation-bar-content">
-                <a href="/index.php" style="color: #FFF"><item class="element">홈</item></a>
-        <item class="element-divider"></item>
-                <a href="../learn/index.html" style="color: #FFF"><item class="element">알아</item></a>
-        <item class="element-divider"></item>
-                <a href="../test/index.html" style="color: #FFF"><item class="element">테스트</item></a>     
-        <item class="element-divider"></item>
-                <a href="../drive/status.php" style="color: #FFF"><item class="element">드라이브</item></a>  
-    </nav>
-</nav>
-        <h1>알아</h1>
-        <button id="lefter" style="color: #FFF; background-color: #FFF">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+              <header class="mdl-layout__header" style="background-color: rgb(51,51,51); position: fixed">
+                <div class="mdl-layout__header-row">
+                  <!-- Title -->
+                  <span class="mdl-layout-title">알아보기</span>
+                  <!-- Add spacer, to align navigation to the right -->
+                  <div class="mdl-layout-spacer"></div>
+                  <!-- Navigation. We hide it in small screens.
+                  <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                  </nav>
+                     -->
+                </div>
+              </header>
+              <div class="mdl-layout__drawer" style="background-color: rgb(51,51,51); border: 0; height: 100%; position: fixed">
+                  <span class="mdl-layout-title"><a href="/kr.html" style="color: #EEE">안전 운전</a></span>
+                <nav class="mdl-navigation">
+                     <a class="mdl-navigation__link" href="/kr/learn/index.html" style="color: #EEE">알아보기</a>
+
+                    <a class="mdl-navigation__link" href="/kr/drive/status.php" style="color: #EEE"><div class="mdl-badge" data-badge="!">도로 상황</div></a>
+
+                    <a class="mdl-navigation__link" href="/kr/settings/" style="color: #EEE">구성</a>
+                </nav>
+              </div>
+            </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div style="padding-left: 10px">
+        <a href="keepleft.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/keep-left.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">뉴질랜드 도로상에 왼쪽을 유지</span>
+            <span class="label fg-white" style="text-align: left">뉴질랜드에서 도로의 왼쪽에 그대로</span>
         </div>
         </div>
         </div>
-        </button>
-        <button id="speeder" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="speedlimits.html">
         <div class="tile" data-role="live-tile" data-effect="slideUp">
         <div class="tile-content image"><img src="/images/50kmph.gif"></div>
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">속도 제한은 뉴질랜드 도로상에 적용</span>
+            <span class="label fg-white" style="text-align: left">속도 제한은 뉴질랜드에서 도로에 적용</span>
         </div>
         </div>
-        </button>
-        <button id="turnsopener" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="conditions.html">
             <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/windy.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">뉴질랜드 도로는 위험 할 수 있습니다</span>
+            <span class="label fg-white" style="text-align: left">뉴질랜드의 도로는 위험 할 수 있습니다</span>
         </div>
         </div>
         </div>
-        </button>
-        <button id="gravelroads" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="distracted.html">
+            <div class="tile double" style="padding-left: 25px; float: left">
+        <div class="tile-content image">
+        <img src="/images/photoswhiledriving.jpg">
+        <div class="brand bg-black">
+            <span class="label fg-white" style="text-align: left">사진을 촬영하기 전에 차 세워</span>
+        </div>
+        </div>
+        </div>
+        </a> 
+        <a href="unsealed.html">
             <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/gravel.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">밀봉되지 않은 도로상에 천천히 드라이브</span>
+            <span class="label fg-white" style="text-align: left">자갈 도로에서 천천히</span>
         </div>
         </div>
         </div>
-        </button>
-        <button id="overtaker" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="overtaking.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/overtaking.png">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">노란색 선, 모서리 또는 주변 교차로상에 추월하지 마십시오</span>
+            <span class="label fg-white" style="text-align: left">노란 선, 모서리 이상 또는 교차 주위에 가지 마세요</span>
         </div>
         </div>
         </div>
-        </button>
-        <button id="motorwaysopen" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="motorways.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/motorways.jpg">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">모터 웨이상에 속도 제한은 100kmph입니다</span>
+            <span class="label fg-white" style="text-align: left">뉴질랜드 고속도로 제한 속도는 100kmph입니다</span>
         </div>
         </div>
         </div>
-        </button>
-       <button id="railway" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="railwaycrossings.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/railway-cross-sign.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">뉴질랜드 철도 횡단의 큰 숫자를 가지고</span>
+            <span class="label fg-white" style="text-align: left">뉴질랜드는 건널목의 큰 숫자를 가지고</span>
         </div>
         </div>
         </div>
-        </button>
-       <button id="slippery" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="slipperyroads.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/slippery.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">젖은 도로상에 경고를 그대로</span>
+            <span class="label fg-white" style="text-align: left">젖은 도로에주의</span>
         </div>
         </div>
         </div>
-        </button>
-       <button id="ice" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="icyroads.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img style="padding-top: 10px" src="/images/ice.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">눈 덮인 도로상에 조심스럽게 드라이브</span>
+            <span class="label fg-white" style="text-align: left">겨울 운전 조건은 위험 할 수 있습니다</span>
         </div>
         </div>
         </div>
-        </button>        
-    <button id="animals" style="color: #FFF; background-color: #FFF">
+        </a>        
+        <a href="animals.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/animals.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">도로에 동물을 조심</span>
+            <span class="label fg-white" style="text-align: left">도로에 동물주의</span>
         </div>
         </div>
         </div>
-        </button>
-         <button id="traffic" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="trafficlights.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/trafficlight.png">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">레드 수단 정지. 당신이 할 수있는 경우 노란색 수단을 중지합니다. 녹색 수단 이동</span>
+            <span class="label fg-white" style="text-align: left">빨간색 = 중지 가능하면
+중지 = 노란색 가능
+하면 = 이동 녹색</span>
         </div>
         </div>
         </div>
-        </button>
-  <button id="oneway" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="onelane.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/oneway.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">뉴질랜드는 편도 교량의 상당한 수가</span>
+            <span class="label fg-white" style="text-align: left">뉴질랜드에있는 많은 편도 다리가있다</span>
         </div>
         </div>
         </div>
-        </button>
-      <button style="color: #FFF; background-color: #FFF">
+        </a>
+      <a>
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/stop.gif">
@@ -433,58 +194,58 @@ $(function() {
         </div>
         </div>
         </div>
-        </button>
-      <button style="color: #FFF; background-color: #FFF">
+        </a>
+      <a>
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/giveway.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">길을 중지하고 줄 준비가 가져</span>
+            <span class="label fg-white" style="text-align: left">중지 및 방법을 제공 할 준비를</span>
         </div>
         </div>
         </div>
-        </button>
-    <button id="roundabouts" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="roundabouts.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/roundabout-sign.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">오른쪽에 모든 트래픽에 비켜라</span>
+            <span class="label fg-white" style="text-align: left">오른쪽에 모든 트래픽에 방법을 제공</span>
         </div>
         </div>
         </div>
-        </button>
-    <button id="parking" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="parking.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/parking.png">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">주차 제한 사항이 적용</span>
+            <span class="label fg-white" style="text-align: left">주차 제한</span>
         </div>
         </div>
         </div>
-        </button>
-    <button id="crossings" style="color: #FFF; background-color: #FFF">
+        </a>
+        <a href="pedcrossing.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/pedestrian.gif">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">보행자에 대한 비켜라</span>
+            <span class="label fg-white" style="text-align: left">보행자 길을 줘</span>
         </div>
         </div>
         </div>
-        </button>     
-    <button id="intersection" style="color: #FFF; background-color: #FFF">
+        </a>     
+  <!--      <a href="intersections.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/intersection.jpg">
         <div class="brand bg-black">
-            <span class="label fg-white" style="text-align: left">교차로상에 모든 방향으로 봐</span>
+            <span class="label fg-white" style="text-align: left">모든 방향 교차로에서 봐</span>
         </div>
         </div>
         </div>
-        </button> 
-    <button id="passing" style="color: #FFF; background-color: #FFF">
+        </a> --> 
+        <a href="passing.html">
     <div class="tile double" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/passing.gif">
@@ -493,8 +254,8 @@ $(function() {
         </div>
         </div>
         </div>
-        </button> 
-    <button id="info" style="color: #FFF; background-color: #FFF">
+        </a> 
+        <a href="information.html">
     <div class="tile" style="padding-left: 25px; float: left">
         <div class="tile-content image">
         <img src="/images/info.png">
@@ -503,180 +264,19 @@ $(function() {
         </div>
         </div>
         </div>
-        </button> 
-        <!--
-        <button id="video" style="color: #FFF; background-color: #FFF">
-        <div class="tile bg-amber">
+        </a> 
+       <!-- <a href="video.html">
+        <div class="tile">
             <div class="tile-content image">
             <img src="/images/player.png">
             </div>
             <div class="brand bg-black">
-                <span class="label fg-white" style="text-align: left">동영상보기</span>
+                <span class="label fg-white" style="text-align: left">看视频</span>
             </div>
         </div>
-        </button>
-        -->
+        </a>-->
+        </div>
+        </div>
         </div>
     </body>
-<div id="left" title="왼쪽 유지">
-  <h2>뉴질랜드에서, 모든 트래픽은 도로의 좌측에 이동한다.</h2>
-    <center><img src="/images/laned-curve.jpg"/> <img src="/images/laned-road.jpg"/></center>
-</div>
-<div id="overtake" title="추월">
-  <h2>안전 할 경우 오른쪽에 느린 차를 전달할 수 있습니다 그리고 당신은 항상 명확한 도로의 최소 100m가 <br> 항상 추월에 적어도 삼초 이전에 나타냅니다.
-    <br><br><b>당신은 추월 할 수 없습니다</b></br>
-    <ul>
-    <li><h3>왼쪽 중심선에 노란색 줄이있는 경우</h3></li>
-    <li><h3>도보 횡단, 철도 횡단 또는 교차로 근처</h3></li>
-        <li><h3>You do not have a clear road 100m during the entire maneuver can not safely perform the path curve in the road or a hill crest.</h3></li>
-        </ul>
-    </h2>
-</div>
-<div id="speed" title="속도 제한은 뉴질랜드 도로상에 적용">
-  <h2>중지 할 수 있도록 당신이 뿅 차 사이의 공간이 있는지 확인하고</h2>
-    <br>
-  <h2>뉴질랜드의 제한 속도는 시속 킬로미터에</h2>
-    <br>
-  <h2>구축 지역은 일반적으로 그러나 낮은 제한이 적용될 수 있습니다 50kmh의 속도 제한이 있습니다.</h2>
-    <br>
-  <h2>다음과 같이 "OPEN ROAD"한계는</h2>
-    <ul>
-    <li>자동차, 오토바이 및 화물차 100kmh</li>
-    <li>무거운 차량 90km/h</li>
-    <li>캐러밴 및 / 또는 트레일러 : 90km/h</li>
-    </ul>
-    <center><img src="/images/openroad.gif" height="128px" width="128px"/> <img src="/images/50kmph.gif" height="128px" width="128px"/></center></div>
-<div id="turns" title="뉴질랜드 도로 조건">
-  <h2>뉴질랜드의 도로는 당신이 사용할 수 있습니다 것보다 매우 다르다</h2>
-    <br>
-  <h3>그들은 일반적으로, 언덕이 좁고 많은 우여곡절이있다.</h3>
-    <br>
-  <p>우리의 도로는 일반적으로 잘 밀봉되어 있지만 많은 자갈 도로는 여전히있다, 감속 및 조건에 드라이브</p>
-    <p>목적지에 도착하고 예상보다 오래 걸릴 생각하는 자신에게 충분한 시간을 준다.</p>
-    </div>
-<div id="gravel" title="자갈과 유엔 봉인 된 도로">
-  <h2>가능한 봉인되지 않은 도로를 피하십시오.</h2>
-    <br>
-  <h3>당신이 그들상에 운전해야하는 경우, 그들은 일반적으로 좁은 기억한다.</h3>
-    <i>천천히 드라이브 및 먼지로 더욱 천천히 다가오는 트래픽을 접근 할 때 당신의 비전을 모호하게 할 수 있고 돌 와서 칩 또는 당신의 앞 유리를 깰 수 있습니다.</i>
-    <br>
-    </div>
-<div id="motorways" title="모터 웨이">
-  <h2>왼쪽을 유지하고 항상 변화하는 차선 전에 3 초 이상을 나타냅니다.</h2>
-    <br>
-  <h2>달리 명시되지 않는 한 뉴질랜드 모터 웨이상에 최대 제한 속도는 100kmh입니다.</h2>
-    <br>
-  <h2>고속도로에 당신은 할 수 없습니다</h2>
-    <ul>
-    <li>걷거나주기</li>
-    <li>정지</li>
-    <li>유턴</li>
-    </ul>
-    </div>
-<div id="railwaycrossing" title="철도 횡단">
-  <h2>항상 모든 철도 교통에 대한 방법을 제공합니다. <br> </h2>
-<P> 일부 횡단은 벨, 사이렌과 장벽을 갖추고 있습니다. 이러한 장치가 작동 할 때로 <br> 당신은 중지해야합니다. 로 <br> 징후가로 <br> 당신이 확신하는 것은 어느 방향에서 어떤 철도 교통이없는 경우를 제외하고는 진행되지해야하며, 다른 횡단에 사용된다. </ P>
-    </div>
-<div id="slipperydialog" title="미끄러운 도로">
-  <h2>속도를 줄이고 젖은 도로상에케어 드라이브. <br> </h2>
-    뉴질랜드의 도로는 매우 용서할 수 없습니다, 그들은 젖은 때 잠재적으로 위험하다. <br> 천천히 아래 제어가 손실되지 않도록케어 드라이브 그림입니다. </ P>
-    </div>
-</div>
-<div id="icyroads" title="얼음이있을 때, 서행">
-  <h2>눈과 얼음 특히 산길 주변 도로는 매우 위험 할 수 있습니다</h2>
-    <center>
-    <p>이러한 조건에서 운전을 할 가능성이있는 경우 렌트카 회사는 체인을 제공 할 것입니다. 천천히 아래하고을 roadsigns, 경찰 및 / 또는 도로 근로자의 지침에 따라 보장 그림입니다. </ P>
-        </center>
-    </div>
-</div>
-<div id="animalsroad" title="도로상에 동물">
-  <h2>당신이 도로상에 농장 동물에 걸쳐 올 경우, 천천히. 경적 소리하지 마십시오</h2>
-    <p>당신은 그들 천천히, 과거 이동 그들 뒤에 접근하고 농부의 지침을 따르도록 을 중지 할 수 있습니다.</p>
-    </div>
-</div>
-<div id="trafficlight" title="교통 신호등">
-  <H2>는 트래픽에서 다음 사항이 적용 점등 : </ H2>
-     <UL>
-     <li> <B>는 레드 </B>는 </ li>로 을 중지 을 의미합니다
-     <li> <B> 노란색 </ b>를 안전하게 그렇게 할 경우 을 중지을 의미합니다 </li>
-     <li> <B> 그린 </ b>을 진행 을 의미합니다가 안전한지 </ li>
- <br>
-     <li> <B> 빨간색 화살표 </ b>을 을 중지 수단 등 켜지지 않습니다 </ li>
-     <li> <B> 노란색 </ b>를 안전하게 그렇게 할 경우 을 중지을 의미합니다 </ li>
-     <li> <B> 그린 </ b>을 켜 을 의미합니다가 안전한지 </ li>
-     </ UL>
-     <i> 당신은 켜기 전에 3 초 이상을 주어야한다 </ I>
-    </div>
-<div id="onebridge" title="한 차선 교량">
- <H2>다리에 접근하기 전에 중지는 분명 확인합니다. </ H2>
-     <P> 빨간색 화살표와 원형 표시는 모든 다가오는 트래픽 방법을 제공해야한다는 것을 의미합니다.
-     로 <br>
-     로 <br>
-     당신의 방향으로 큰 화살표가있는 사각형 기호는 방법의 권리를 의미합니다. 차량이 다리에 또는 방법을 제공합니다 을 중지 할 수없는 경우 그림입니다. </ P>
-    <center><img src="/images/singlenane.jpg"/></center>
-    </div>
-<div id="roundabout" title="로터리">
-    <H2> 오른쪽으로 모든 트래픽에 자리를 줘 </ H2>
-     <H2> LEFT </ H2> </ 센터>에 원형 교차로를 입력
-   <P> 신호 교차로에서 당신 차례 계획하고 하나 전에 출구를 통과 할 때 취할 계획이 있다면. </ P>
-    <p>
-    </div>
-<div id="parkiner" title="주차 제한">
-    <h2>깨진 노란 선상에 주차하지 않음
-        <br>
-        교차로 또는 횡단 보도의 6m 내에서 주차하지 않음
-        <br>
-        다가오는 트래픽에 직면 주차하지 않음</h2>
-    <br>
-    <img src="/images/clearway.gif" width="100px"/> 정지 표지판에 표시된 지역에서 정지하거나 주차하지 마십시오.<br><br>
-    <img src="/images/clearwaydate.gif" width="100px"/> 지정된 시간 동안 없음 중지 징후로 표시 영역에서 중지하거나 공원하지 마십시오.<br><br>
-    <img src="/images/parkingtime.gif" width="100px" align="left"/>&nbsp; 당신은 기호 번호를 주차 할 수<br><br>
-    <p>
-    </div>
-<div id="pedcrossing" title="보행자 횡단">
-    <center><H2>보행자에게 길을 줘 </ H2> 
-     <p> 접근 할 때 속도를 줄이고 을 중지 할 준비가되어 </ P>
-   <P> 교차점 근처에 추월하지 마십시오. </ P>
-</center>
-</div>
-<div id="inter" title="교차">
-    <h2>모든 표지판과 신호등에 따라 두 가지를 본다. 아무 표시가없는 경우 다음 규칙을 따라야 ::</h2>
-        <ul>
-    <li>당신은 켜면, 직선 자동차통한에 방법을 제공합니다</li>
-    <li>오른쪽으로가는 경우, 왼쪽에 트래픽 방법을 제공합니다</li>
-    <li>T 교차로 진입로에서 측면 도로는 직선 도로상에 트래픽 방법을 제공합니다합니다</li>
-    <li>그렇지 않으면 오른쪽에서 오는 차량에 방법을 제공합니다.</li>
-    </ul>
-</div>
-<div id="passer" title="전달하지 않는 한 왼쪽 유지">
-         <H2> 이중 차선 도로를 사용할 사용 추월하지 않는 한 왼쪽 차선 인 경우. </ H2>
-     <P> 베이, 느린 차량 베이를 전달하고 차선은 항상 왼쪽 차선을 사용하고 다른 사람이 통과 할 수 있도록 전달에서은. 항상 안전 할 때 다른 차를 통과하자 그림입니다.
-</div>
-<div id="information" title="중요 정보">
-<H2> 드라이버 라이센스 : </ H2>
-    <H4> 당신은 현재 라이센스 및 / 또는 국제 라이센스가 있어야합니다 </ H4>
-    <H4>은 렌트카를 고용하기위한 최소 연령은 일반적으로 21 </ H4>
-    로 <br>
-    <H2> Impared 운전 : </ H2>
-    운전에 영향을 줄 수 <H4> 마약 및 / 또는 약물은 불법 </ H4>
-    <H4>는 20에서 드라이버 제로 알코올 제한이 있습니다; 로 <br> 20 드라이버가 더 이상 두 개의 표준 음료 운전하기 전에 소비자에게 권장되지 않습니다 </ H4>
-    로 <br>
-    <H2> 안전 벨트 : </ H2>
-    <H4> 당신은 150 달러의 벌금을 부과 할 수 있습니다 그렇지 않을 경우, 안전 벨트를 착용해야 </ H4>
-    로 <br>
-    <H2> 핸드폰 : </ H2>
-    완전히 손을 무료 온라인하지 않는 한 운전 또는 차량에 장착 자주 접촉하면서 <H4> 당신은 휴대 전화를 사용해서는 안됩니다. </ H4>를
-    로 <br>
-    <H2> 충돌 : </ H2>
-    <H4> 당신이 충돌 사고를하는 경우 중지하고 누군가가 상처 경우 경찰 (111)로 전화하십시오. 차량 등록 번호를 입수 해 24 시간 이내에 보험 회사 및 / 또는 대여 자동차 회사에 통지 <br> 이미지합니다. 소유자를 찾을 수 없습니다 싶은로 <br> 아무도 다치게하지 않으면 해당 부동산 소유주 또는 경찰에 귀하의 이름과 주소를 제공합니다. </ H4>를
-</div>
-<!--
-<div id="videoplayer" title="Video">
-    <video width="720px" controls>
-  <source src="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_30fps_normal.mp4" type="video/mp4">
-  <source src="http://mirrorblender.top-ix.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg" type="video/ogg">
-  Your browser does not support HTML5 video.
-</video>
-</div>
--->
 </html>
