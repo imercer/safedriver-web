@@ -1,3 +1,9 @@
+var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+if (iOS == true) {
+    document.getElementById("enable-banner").className = "nothidden";
+}
+
 function sleep(milliseconds) {
   var start = new Date().getTime();
   for (var i = 0; i < 1e7; i++) {
@@ -23,6 +29,7 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 	return dist
 }
 
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var context = new AudioContext();
 var playAudio = function (buffer) {
     var sourceBuffer = context.createBufferSource();
@@ -44,7 +51,23 @@ var loadAlert = function (audio) {
     };
     request.send();
 };
+// Silent Play for iOS
+function silentPlayer() {
+    console.log('silentplayer start');
+	// create empty buffer
+	var buffer = context.createBuffer(1, 1, 22050);
+	var source = context.createBufferSource();
+	source.buffer = buffer;
 
+	// connect to output (your speakers)
+	source.connect(context.destination);
+
+	// play the file
+	source.start(0);
+    document.getElementById("enable-banner").className = "hidden";
+
+};    
+ 
 var count = 0;
 var xhttp = new XMLHttpRequest();
 function success(pos) {

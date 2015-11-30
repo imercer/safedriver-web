@@ -29,10 +29,15 @@
     text-align:center;
 }
     </style>
-<script src="/geolocation/notify.js"></script>
 </head>
 <body id="body" class="non-alert">
+            <div style="background-color: rgba(255,58,0,0.85); width: 100%; height: auto; max-height:20%; color: #EEE; position: fixed; z-index: 21" onclick="silentPlayer();" id="enable-banner" class="hidden">
+                    <center>
+                    <h5>Click here to enable Audio Alerts</h5>
+                    </center>
+            </div>
     <h1 id="speed" style="font-size: 10vw; color: white;">LOADING...</h1>
+<script src="/geolocation/notify.js"></script>
 <script>
 function sleep(milliseconds) {
   var start = new Date().getTime();
@@ -58,7 +63,8 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 	if (unit=="N") { dist = dist * 0.8684 }
 	return dist
 }
-
+    
+var context = window.AudioContext || window.webkitAudioContext;
 var context = new AudioContext();
 var playAudio = function (buffer) {
     var sourceBuffer = context.createBufferSource();
@@ -79,7 +85,23 @@ var loadAudioFile = function () {
     };
     request.send();
 };
+    
+// Silent Play for iOS
+window.addEventListener('touchstart', function() {
 
+	// create empty buffer
+	var buffer = context.createBuffer(1, 1, 22050);
+	var source = context.createBufferSource();
+	source.buffer = buffer;
+
+	// connect to output (your speakers)
+	source.connect(context.destination);
+
+	// play the file
+	source.start(0);
+
+}, false);    
+ 
 var count = 0;
 function success(pos) {
   var crd = pos.coords;

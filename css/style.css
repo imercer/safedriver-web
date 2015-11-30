@@ -115,3 +115,9 @@
     background-color: rgba(0,0,0,0.8);
     padding-bottom: 5px;
 }
+.hidden {
+    display: none;
+}
+.nothidden {
+    display: block;
+}
