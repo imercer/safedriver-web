@@ -41,7 +41,7 @@ var playAudio = function (buffer) {
 var loadAlert = function (audio) {
     console.log('loading sound' + audio);
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://beta.app.safedriver.org.nz/geolocation/audio/' + audio + '.mp3', true);
+    request.open('GET', 'http://app.safedriver.org.nz/geolocation/audio/' + audio + '.mp3', true);
     request.responseType = 'arraybuffer';
     request.onload = function () {
         var undecodedAudio = request.response;
