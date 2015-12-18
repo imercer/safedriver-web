@@ -48,6 +48,12 @@
                 </nav>
               </div>
             </div>
+            <div style="background-color: rgba(255,58,0,0.85); width: 100%; height: auto; max-height:20%; color: #EEE; position: fixed; z-index: 21" onclick="silentPlayer();" id="enable-banner" class="hidden">
+                    <center>
+                    <h5>Click here to enable Audio Alerts</h5>
+                    </center>
+            </div>
+            <script src="/geolocation/notify.js"></script>
         <br>
         <br>
         <?php
