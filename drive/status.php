@@ -53,7 +53,7 @@
                     <h5>Click here to enable Audio Alerts</h5>
                     </center>
             </div>
-            <script src="/geolocation/notify.js"></script>
+            <script src="/geolocation/mapsapi.js"></script><script src="/geolocation/notify.js"></script>
         <br>
         <br>
         <?php
