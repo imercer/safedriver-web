@@ -13,14 +13,39 @@
         <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-red.min.css">
         <!-- Material Design icon font -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <script>
+      <!--  <script>
             if (localStorage.lang) {
                 window.location = "/" + localStorage.lang + ".html";
             } else {
                 window.location = "/welcome/languageselect.html";
             }
                  
-        </script>
+        </script>-->
     </head>
-<body>
-    <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate progress-demo" style="width: 100%"></div>
+<body style="text-align: center;">
+<div id="normal" style="margin:20px">
+    <img src="images/icon.png" style="width: 20%; margin: 0 auto; ">
+    <h1>Update Required</h1>
+    <h3>You'll need to update to the latest version of SafeDriver to continue using this app</h3>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="background-color: olive" onClick="window.location='http://onelink.to/9k8h2j'">
+      UPDATE NOW
+    </button>
+</div>
+<div id="windowsphone" style="margin:20px; display:none">
+    <img src="images/icon.png" style="width: 20%; margin: 0 auto; ">
+    <h1>Version Discontinued</h1>
+    <h3>SafeDriver on the Windows platform has been discontined due to technical limitations. To continue using SafeDriver you'll need a supported device.</h3>
+</div><br>
+
+        <script>
+		var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+		if (/android/i.test(userAgent)) {
+		}
+		// iOS detection from: http://stackoverflow.com/a/9039885/177710
+		else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+		}
+		else {
+			document.getElementById("normal").style.display = "none";
+			document.getElementById("windowsphone").style.display = "block";
+		}
+		</script>
